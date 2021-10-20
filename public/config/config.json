@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
-  "SCAN_LINK": "https://polygonscan.com/token/0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+  "CONTRACT_ADDRESS": "0x0f0F593CBe0A10c2F669C17be5164B7D742f9590",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x0f0F593CBe0A10c2F669C17be5164B7D742f9590",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
+    "NAME": "RINKEBY",
+    "SYMBOL": "ETH",
+    "ID": 4
   },
-  "NFT_NAME": "Nerdy Coder Clones",
-  "SYMBOL": "NCC",
-  "MAX_SUPPLY": 1000,
-  "WEI_COST": 75000000000000000,
-  "DISPLAY_COST": 0.075,
+  "NFT_NAME": "Fortune Cookies",
+  "SYMBOL": "FTC",
+  "MAX_SUPPLY": 10,
+  "WEI_COST": 888000000000000,
+  "DISPLAY_COST": 0.000888,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
-  "SHOW_BACKGROUND": true
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/fortunecookies-v92sch5hdh",
+  "SHOW_BACKGROUND": false
 }
