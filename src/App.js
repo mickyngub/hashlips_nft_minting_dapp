@@ -4,6 +4,8 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import earlyJSON from "./whitelist/merkleproof-earlyCookie.json";
+import xJSON from "./whitelist/merkleproof-cookieX.json";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -99,6 +101,8 @@ function App() {
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
+  const [idNumber, setIdNumber] = useState(99999);
+  const [proof, setProof] = useState([]);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -118,7 +122,7 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
-  const claimNFTs = () => {
+  const publicMint = () => {
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
@@ -127,8 +131,42 @@ function App() {
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
+
     blockchain.smartContract.methods
       .mintCookie(mintAmount)
+      .send({
+        gasLimit: String(totalGasLimit),
+        to: CONFIG.CONTRACT_ADDRESS,
+        from: blockchain.account,
+        value: totalCostWei,
+      })
+      .once("error", (err) => {
+        console.log(err);
+        setFeedback("Sorry, something went wrong please try again later.");
+        setClaimingNft(false);
+      })
+      .then((receipt) => {
+        console.log(receipt);
+        setFeedback(
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+        );
+        setClaimingNft(false);
+        dispatch(fetchData(blockchain.account));
+      });
+  };
+
+  const preMint = () => {
+    let cost = CONFIG.WEI_COST;
+    let gasLimit = CONFIG.GAS_LIMIT;
+    let totalCostWei = String(cost * mintAmount);
+    let totalGasLimit = String(gasLimit * mintAmount);
+    console.log("Cost: ", totalCostWei);
+    console.log("Gas limit: ", totalGasLimit);
+    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
+    setClaimingNft(true);
+
+    blockchain.smartContract.methods
+      .preMintCookie(mintAmount, proof, idNumber)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -185,10 +223,36 @@ function App() {
 
   useEffect(() => {
     getConfig();
+    // console.log(earlyJSON);
+    // console.log(xJSON);
   }, []);
 
   useEffect(() => {
     getData();
+    console.log(blockchain.account);
+    let earlyWhitelist = earlyJSON["whitelist"];
+    let i = 0;
+    for (let key of Object.keys(earlyWhitelist)) {
+      // console.log(earlyWhitelist[key]["address"]);
+      if (earlyWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+        setIdNumber(i);
+        setProof(earlyWhitelist[i]["proof"]);
+        console.log("You're an early cookie", i, earlyWhitelist[i]["proof"]);
+      }
+      i++;
+    }
+
+    let xWhitelist = xJSON["whitelist"];
+    i = 0;
+    for (let key of Object.keys(xWhitelist)) {
+      // console.log(xWhitelist[key]["address"]);
+      if (xWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+        setIdNumber(i);
+        setProof(earlyWhitelist[i]["proof"]);
+        console.log("You're an x cookie", i, earlyWhitelist[i]["proof"]);
+      }
+      i++;
+    }
   }, [blockchain.account]);
 
   return (
@@ -353,7 +417,20 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          claimNFTs();
+                          publicMint();
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "BUY"}
+                      </StyledButton>
+                    </s.Container>
+                    <s.SpacerSmall />
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          preMint();
                           getData();
                         }}
                       >

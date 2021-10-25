@@ -82,11 +82,24 @@
       {
         "indexed": false,
         "internalType": "bool",
-        "name": "pause",
+        "name": "pauseMint",
         "type": "bool"
       }
     ],
-    "name": "PauseEvent",
+    "name": "PauseMintStatusEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "pausePreMint",
+        "type": "bool"
+      }
+    ],
+    "name": "PausePreMintStatusEvent",
     "type": "event"
   },
   {
@@ -115,19 +128,6 @@
     "type": "event"
   },
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "pause",
-        "type": "bool"
-      }
-    ],
-    "name": "UnpauseEvent",
-    "type": "event"
-  },
-  {
     "inputs": [],
     "name": "MAX_COOKIES_SUPPLY",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
@@ -150,8 +150,22 @@
   },
   {
     "inputs": [],
-    "name": "PAUSE",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "name": "MAX_PRE_MINT_RESERVED",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "NUM_PRE_MINT_COOKIE_X",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "NUM_PRE_MINT_EARLY_COOKIE",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -198,6 +212,15 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getCookiePreMint",
+    "outputs": [
+      { "internalType": "uint256", "name": "amount", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       { "internalType": "address", "name": "owner", "type": "address" },
       { "internalType": "address", "name": "operator", "type": "address" }
@@ -209,15 +232,44 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "amountPurchase",
-        "type": "uint256"
-      }
+      { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
+      { "internalType": "uint256", "name": "_number", "type": "uint256" }
+    ],
+    "name": "isEligibleCookieX",
+    "outputs": [
+      { "internalType": "bool", "name": "isEligible", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
+      { "internalType": "uint256", "name": "_number", "type": "uint256" }
+    ],
+    "name": "isEligibleEarlyCookie",
+    "outputs": [
+      { "internalType": "bool", "name": "isEligible", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "amountPurchase", "type": "uint256" }
     ],
     "name": "mintCookie",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "amountMint", "type": "uint256" }
+    ],
+    "name": "mintUnsoldCookie",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -246,8 +298,30 @@
   {
     "inputs": [],
     "name": "pauseMint",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pausePreMint",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amountPurchase",
+        "type": "uint256"
+      },
+      { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
+      { "internalType": "uint256", "name": "_number", "type": "uint256" }
+    ],
+    "name": "preMintCookie",
     "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "payable",
     "type": "function"
   },
   {
@@ -259,15 +333,15 @@
   },
   {
     "inputs": [],
-    "name": "reveal",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "name": "rootCookieX",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "revealed",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "name": "rootEarlyCookie",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -306,22 +380,59 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "string",
-        "name": "_newBaseExtension",
-        "type": "string"
-      }
+      { "internalType": "string", "name": "_newBaseURI", "type": "string" }
     ],
-    "name": "setBaseExtension",
+    "name": "setBaseURI",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "_newBaseURI", "type": "string" }
+      { "internalType": "uint256", "name": "max_supply", "type": "uint256" },
+      { "internalType": "uint256", "name": "max_premint", "type": "uint256" }
     ],
-    "name": "setBaseURI",
+    "name": "setMaxSupplyAndPreMintSupply",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bool", "name": "_setPauseMint", "type": "bool" }
+    ],
+    "name": "setPauseMint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bool", "name": "_setPausePreMint", "type": "bool" }
+    ],
+    "name": "setPausePreMint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "_rootCookieX", "type": "bytes32" }
+    ],
+    "name": "setRootCookieX",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_rootEarlyCookie",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setRootEarlyCookie",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -372,6 +483,13 @@
   },
   {
     "inputs": [],
+    "name": "totalNumPreMint",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "totalSupply",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
@@ -398,13 +516,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "unPauseMint",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       { "internalType": "address", "name": "_owner", "type": "address" }
     ],
@@ -417,9 +528,9 @@
   },
   {
     "inputs": [],
-    "name": "withdraw",
+    "name": "withdrawAll",
     "outputs": [],
-    "stateMutability": "payable",
+    "stateMutability": "nonpayable",
     "type": "function"
   }
 ]
