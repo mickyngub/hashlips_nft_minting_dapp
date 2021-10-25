@@ -135,7 +135,7 @@ function App() {
     blockchain.smartContract.methods
       .mintCookie(mintAmount)
       .send({
-        gasLimit: String(totalGasLimit),
+        // gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         value: totalCostWei,
@@ -168,7 +168,7 @@ function App() {
     blockchain.smartContract.methods
       .preMintCookie(mintAmount, proof, idNumber)
       .send({
-        gasLimit: String(totalGasLimit),
+        // gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         value: totalCostWei,
@@ -248,8 +248,8 @@ function App() {
       // console.log(xWhitelist[key]["address"]);
       if (xWhitelist[key]["address"].toLowerCase() == blockchain.account) {
         setIdNumber(i);
-        setProof(earlyWhitelist[i]["proof"]);
-        console.log("You're an x cookie", i, earlyWhitelist[i]["proof"]);
+        setProof(xWhitelist[i]["proof"]);
+        console.log("You're an x cookie", i, xWhitelist[i]["proof"]);
       }
       i++;
     }
@@ -421,7 +421,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "BUY"}
+                        {claimingNft ? "BUSY" : "Mint"}
                       </StyledButton>
                     </s.Container>
                     <s.SpacerSmall />
@@ -434,7 +434,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "BUY"}
+                        {claimingNft ? "BUSY" : "Pre Mint"}
                       </StyledButton>
                     </s.Container>
                   </>
