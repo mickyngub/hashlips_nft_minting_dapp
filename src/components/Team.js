@@ -67,7 +67,7 @@ const TEAMS = [
     id: 4,
     image: stacia,
     name: "Stacia",
-    job: "Project Lead,Marketer, Strategic Planner",
+    job: "Project Lead, Strategic Planner",
     exps: [
       "Management Consultant",
       "Project Manager in Tech Startup",
