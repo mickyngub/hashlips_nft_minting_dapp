@@ -7,8 +7,6 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "./assets/styles/_app.css";
 
-import "./styles/reset.css";
-
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
