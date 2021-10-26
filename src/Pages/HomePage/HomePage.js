@@ -54,7 +54,9 @@ const HomePage = () => {
   const WhoWeAre = () => {
     return (
       <section className="who-wrapper flex flex-col">
-        <h2 className="text--5xl">Who we are ?</h2>
+        <h2 style={{ marginBottom: "16px" }} className="text--5xl">
+          Who are we ?
+        </h2>
         <p className="text--xl text--smoke">
           We are a group of crypto-investors, where each member has their own
           speciality from their work in real life. We have seen many projects

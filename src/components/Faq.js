@@ -10,7 +10,7 @@ export default function Faq() {
       <h2 className="text--5xl m-auto">FAQs</h2>
       <div className="faq-body">
         <div className="faq-box">
-          <h2 className="text--4xl">Who exactly is Meow to the Moon</h2>
+          <h2 className="text--4xl">What exactly is Meow to the Moon ?</h2>
           <p className="text--xl text--smoke">
             Meow to the Moon is a 7777 randomly generated unordinary cats
             existing on Ethereum Blockchain. We don’t promise anything that is
@@ -28,12 +28,8 @@ export default function Faq() {
         <div className="faq-box">
           <h2 className="text--4xl">Will there be a pre-sale or whitelist ?</h2>
           <p className="text--xl text--smoke">
-            After researching through numerous projects, we have decided to
-            create a new way of whitelist. The role @The Early Meows will serve
-            as a new way of whitelist, in which they will have the access to the
-            "early channel", a channel that they will be notified a hint about
-            the timing of the drop. More detail can be found in discord channel
-            😺
+            Yes there are two roles for whitelist: Early Meow and Meow Junior
+            Role. Learn more in our discord 😺
           </p>
         </div>
         <div className="faq-box">
@@ -54,9 +50,8 @@ export default function Faq() {
             The founders have been an investor in Crypto world for over three
             years. There were ups and downs due to high volatility of the
             market. Hence, we want to create the project where holders can
-            receive passive incomes as well as a continuous benefit, ensuring
-            that the holder can feel like “ I will definitely make more than
-            what I pay for minting.”
+            receive a continuous benefit, ensuring that the holder can feel like
+            “ I will definitely make more than what I pay for minting.”
           </p>
         </div>
         <div className="faq-box">

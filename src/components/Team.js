@@ -36,11 +36,16 @@ export default function Team() {
 const TEAMS = [
   {
     id: 1,
-    image: secwind,
-    name: "DarkLord",
-    job: "Project Lead, Front-end Dev",
-    exps: ["Senior Front-end Dev at tech-startup", "Cryptocurrency Investor"],
+    image: stacia,
+    name: "Stacia",
+    job: "Project Lead",
+    exps: [
+      "Management Consultant",
+      "Project Manager in Tech Startup",
+      "Investment Strategist in Financial Insititute",
+    ],
   },
+
   {
     id: 2,
     image: plakorp,
@@ -63,15 +68,12 @@ const TEAMS = [
       "Smart Contract Developer",
     ],
   },
+
   {
     id: 4,
-    image: stacia,
-    name: "Stacia",
-    job: "Project Lead, Strategic Planner",
-    exps: [
-      "Management Consultant",
-      "Project Manager in Tech Startup",
-      "Investment Strategist in Financial Insititute",
-    ],
+    image: secwind,
+    name: "DarkLord",
+    job: "Front-end Dev",
+    exps: ["Senior Front-end Dev at tech-startup", "Cryptocurrency Investor"],
   },
 ];

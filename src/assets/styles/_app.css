@@ -248,6 +248,10 @@ ul.timeline-body li.inActive.timeline-item {
 ul.timeline-body li.active .timeline-item-title {
   gap: 5px;
 }
+
+.pre-white {
+  white-space: pre-line;
+}
 /*-------------x----------------roadMap-----------------x---------------*/
 
 /*------------------------------Who are u---------------------------------*/
