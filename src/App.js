@@ -1,5 +1,6 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
+import Slotmachine from "./Pages/slotmachine/slotmachine";
 
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
@@ -35,6 +36,7 @@ const App = () => {
       <Nav onProps={onProps} />
       <Switch>
         <Route path="/" exact component={HomePage} />
+        <Route path="/slotmachine" exact component={Slotmachine} />
         <Redirect to="/" />
       </Switch>
       <Footer onProps={onProps} />
