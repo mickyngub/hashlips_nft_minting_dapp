@@ -787,7 +787,6 @@ section.footer-wrapper .footer-container {
 /*-------------x----------------slot-machine-and-modal----------------x---------------*/
 .relative {
   position: relative;
-  margin-top: 33px;
 }
 
 .modal {
@@ -897,11 +896,12 @@ section.footer-wrapper .footer-container {
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
-    width: 1116px;
+    width: 1400px;
     margin-bottom: 0px;
   }
   .bg-lg {
     display: block;
+    width: 100%;
   }
   .bg-md {
     display: none;
@@ -917,7 +917,7 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 82%;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -930,14 +930,14 @@ section.footer-wrapper .footer-container {
     padding: 20px;
     border: 1px solid #888;
     border-radius: 22px;
-    width: 50%;
+    width: 25%;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
-    width: 1116px;
+    width: 100%;
     margin-bottom: -6px;
   }
   .bg-lg {
@@ -957,7 +957,47 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 82%;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slot-img {
+    width: 100%;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: -6px;
+  }
+  .bg-lg {
+    display: block;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1037,7 +1077,7 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 79%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

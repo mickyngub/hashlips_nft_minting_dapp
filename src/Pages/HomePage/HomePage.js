@@ -6,7 +6,6 @@ import Rarities from "../../components/Rarities";
 import RoadMap from "../../components/Roadmap";
 import Team from "../../components/Team";
 import Faq from "../../components/Faq";
-
 import cat1 from "../../assets/images/cat1.png";
 import cat2 from "../../assets/images/cat2.png";
 import cat3 from "../../assets/images/cat3.png";
@@ -14,6 +13,34 @@ import cat4 from "../../assets/images/cat4.png";
 import cat5 from "../../assets/images/cat5.png";
 import cat6 from "../../assets/images/cat6.png";
 import duedate from "../../assets/images/duedate.png";
+import Nav from "../../components/layout/Nav";
+import Footer from "../../components/layout/Footer";
+
+import discord from "../../assets/images/discord.png";
+import twitter from "../../assets/images/twitter.png";
+
+const onProps = {
+  socials: [
+    //   {
+    //     id: 1,
+    //     image: useImage('/medium.png'),
+    //     url: 'https://discord.gg/gEnvhUGh58',
+    //     text: 'meow to the moon medium',
+    //   },
+    {
+      id: 2,
+      image: discord,
+      url: "https://discord.gg/gEnvhUGh58",
+      text: "meow to the moon discord",
+    },
+    {
+      id: 3,
+      image: twitter,
+      url: "https://twitter.com/Meow2themoonNFT",
+      text: "meow to the moon twitter",
+    },
+  ],
+};
 
 const HomePage = () => {
   const ComingSoon = () => {
@@ -67,6 +94,7 @@ const HomePage = () => {
   };
   return (
     <>
+      <Nav onProps={onProps} />
       <Banner />
       {ComingSoon()}
       {ProductImage()}
@@ -76,6 +104,7 @@ const HomePage = () => {
       {WhoWeAre()}
       <Team />
       <Faq />
+      <Footer onProps={onProps} />
     </>
   );
 };
