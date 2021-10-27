@@ -20,13 +20,15 @@ export default function Footer({ onProps }) {
       <div className="social-wrapper">
         <div className="social-col">
           {SOCIALS.map((social, index) => (
-            <img
-              src={social.image}
-              alt={social.text}
-              key={`social.id-${index}`}
-              onClick={onProps.nextRedirect}
-              url={social.url}
-            />
+            <a href={social.url} target="_blank" rel="nopener noreferrer">
+              <img
+                src={social.image}
+                alt={social.text}
+                key={`social.id-${index}`}
+                onClick={onProps.nextRedirect}
+                url={social.url}
+              />
+            </a>
           ))}
         </div>
       </div>

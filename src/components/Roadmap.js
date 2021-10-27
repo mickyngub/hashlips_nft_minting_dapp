@@ -105,11 +105,14 @@ const ITEMS = [
       text: "",
     },
     title: "The Treasure Cave",
-    text: `During the expenditure in the land of trade, the Meow’s holder will be able to stake their Meow NFT to receive the loyalty Meow Token which can be used in Meow’s cave, an exclusive reward center where holder can exchange their Meow Token for: 
+    text: `During the expenditure in the land of trade, the Meow’s holder will be able to stake their Meow NFT to receive the $Meow Token which can be used in Meow’s cave, an exclusive reward center where holder can exchange their $Meow Token for: 
     
     [Exclusive merchandise]:  Hoodie, Smooshie Meow Pillow, Meow Figure, and etc
+
     [DAO’s Selection]: Anything purchased by the Dao’s wallet 
+
     [Fast-pass comic ticket]: One-week fast pass
+    
     [The Secret Ticket]: The pass to the secret collection
 
     The royalty fee from the secondary marketplace will be distributed accordingly, 
@@ -144,7 +147,7 @@ const ITEMS = [
     
     [Sandbox Land] - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works. 
 
-    [Meow Token V2] - We will expand the usage of Meow token beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
+    [$Meow Token V2] - We will expand the usage of $Meow token beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
     
     Season 2 Collection: Be sure to follow Meow To the Moon The Serie 
 
