@@ -105,13 +105,16 @@ const ITEMS = [
       text: "",
     },
     title: "The Treasure Cave",
-    text: `During the expenditure in the land of trade, the Meow’s holder will be able to stake their Meow NFT to receive the loyalty Meow Token which can be used in Meow’s cave, an exclusive point-reward center where holder can exchange their Meow’s point for: 
-    \nExclusive merchandise:  Hoodie, Smooshie Meow Pillow, Meow Figure, and etc
-    DAO’s Selection: Anytime purchased by the Dao’s wallet. 
-    Fast-pass comic ticket: One-week fast pass
-    The Secret Ticket: The pass to the secret collection. The royalty fee from the secondary marketplace will be distributed accordingly, 
+    text: `During the expenditure in the land of trade, the Meow’s holder will be able to stake their Meow NFT to receive the loyalty Meow Token which can be used in Meow’s cave, an exclusive reward center where holder can exchange their Meow Token for: 
     
+    [Exclusive merchandise]:  Hoodie, Smooshie Meow Pillow, Meow Figure, and etc
+    [DAO’s Selection]: Anything purchased by the Dao’s wallet 
+    [Fast-pass comic ticket]: One-week fast pass
+    [The Secret Ticket]: The pass to the secret collection
+
+    The royalty fee from the secondary marketplace will be distributed accordingly, 
     30% for marketing, 30% to the DAO wallet, 20% to sweep the floor, 10% to charity upon community selection, and 10% for hiring new members.
+    
     In addition, the start of Meow to the Moon The Serie comic will be available for holders to read every week.`,
     position: "3",
     is_active: false,
@@ -123,7 +126,10 @@ const ITEMS = [
       text: "",
     },
     title: "The Doggy Attack",
-    text: "The spaceship has been attacked by the doggy army.What should we do? The MVP of the war will receive a special airdrop from the Meow’s Team. The airdrop will be the animated version of Meow to the Moon NFT. The holders will have the opportunity to participate in a mini-game, in which your meow will be used as the persona to participate in the game. Will you be the winner?",
+    text: `The spaceship has been attacked by the doggy army.What should we do? The MVP of the war will receive a special airdrop from the Meow’s Team. The airdrop will be the animated version of Meow to the Moon NFT. 
+
+    The holders will have the opportunity to participate in a mini-game, in which your meow will be used as the persona to participate in the game. Will you be the winner?
+    `,
     position: "4",
     is_active: false,
   },
@@ -136,9 +142,9 @@ const ITEMS = [
     title: "Episode X",
     text: `In the last chapter of Meow to the Moon Season 1, there will be a cliffhanger. The cliffhanger will revolve around the Meow Secret Pass. For the secret pass holder, you will have the access for a spot in this Season 2 journey. Are you ready for the next battle? 
     
-    Sandbox Land - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works. 
-    
-    Meow Token V2 - We will expand the usage of Meow token beyond the reward center in season 1. It can be in the format of NFT-game, Utility Usage, and etc.
+    [Sandbox Land] - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works. 
+
+    [Meow Token V2] - We will expand the usage of Meow token beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
     
     Season 2 Collection: Be sure to follow Meow To the Moon The Serie 
 

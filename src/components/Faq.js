@@ -65,8 +65,7 @@ export default function Faq() {
         <div className="faq-box">
           <h2 className="text--4xl">Date of Launch</h2>
           <p className="text--xl text--smoke">
-            It will be done on the Stealth Drop 777 week. As for the period of
-            the week, it is to be announced.
+            <b>Pre-sale Nov 1, 2021. Public sale Nov 2, 2021.</b>
           </p>
         </div>
       </div>
