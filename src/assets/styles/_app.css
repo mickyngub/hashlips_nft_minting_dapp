@@ -842,20 +842,7 @@ section.footer-wrapper .footer-container {
   position: relative;
   top: 1px;
 }
-.myButton > .myButton-text {
-  font-size: 28px;
-  font-weight: 700;
-  background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.myButton:active > .myButton-text {
-  font-size: 28px;
-  font-weight: 700;
-  background: #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .myButton-modal {
   box-shadow: 0px 4px 0px 0px #558bd3;
   background: linear-gradient(to bottom, #ffffff 5%, #cce2ff 100%);
@@ -877,6 +864,7 @@ section.footer-wrapper .footer-container {
   position: relative;
   top: 1px;
 }
+
 .myButton-modal > .myButton-modal-text {
   font-size: 28px;
   font-weight: 700;
@@ -892,11 +880,28 @@ section.footer-wrapper .footer-container {
   -webkit-text-fill-color: transparent;
 }
 
+
+
+
 @media screen and (max-width: 2560px) {
+  .myButton > .myButton-text {
+    font-size: 62px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 62px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
-    width: 1400px;
+    width: 100%;
     margin-bottom: 0px;
   }
   .bg-lg {
@@ -923,6 +928,71 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: none;
+  }
+  .slot-img-xx {
+    width: 100%;
+    display: block;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .myButton > .myButton-text {
+    font-size: 62px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 62px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .bg-lg {
+    display: block;
+    width: 100%;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slot-img {
+    width: 100%;
+    display: none;
+  }
+  .slot-img-xx {
+    width: 100%;
+    display: block;
   }
   .modal-content {
     background-color: #fefefe;
@@ -934,6 +1004,21 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 1440px) {
+  
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -957,12 +1042,17 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 74%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .slot-img-xx {
+    width: 100%;
+    display: none;
+  }
   .slot-img {
     width: 100%;
+    display: block;
   }
   .modal-content {
     background-color: #fefefe;
@@ -973,7 +1063,22 @@ section.footer-wrapper .footer-container {
     width: 50%;
   }
 }
+
 @media screen and (max-width: 1400px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1003,6 +1108,68 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: -6px;
+  }
+  .bg-lg {
+    display: block;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .modal-content {
     background-color: #fefefe;
@@ -1014,6 +1181,20 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 1200px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1043,6 +1224,68 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1112px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: -6px;
+  }
+  .bg-lg {
+    display: block;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .modal-content {
     background-color: #fefefe;
@@ -1054,6 +1297,21 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 1024px) {
+
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1077,7 +1335,7 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 75%;
+    top: 76%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1094,6 +1352,20 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 992px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1111,18 +1383,22 @@ section.footer-wrapper .footer-container {
   }
   .absolute {
     position: absolute;
-    top: 50%;
+    top: 59%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .absolute-button {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .slot-img {
-    width: 80%;
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .modal-content {
     background-color: #fefefe;
@@ -1134,6 +1410,20 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 768px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1151,6 +1441,10 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .absolute {
     position: absolute;
@@ -1173,7 +1467,80 @@ section.footer-wrapper .footer-container {
     width: 80%;
   }
 }
+@media screen and (max-width: 683px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: -6px;
+  }
+  .bg-lg {
+    display: none;
+  }
+  .bg-md {
+    display: block;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 576px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1202,6 +1569,10 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .modal-content {
     background-color: #fefefe;
@@ -1212,7 +1583,79 @@ section.footer-wrapper .footer-container {
     width: 80%;
   }
 }
+@media screen and (max-width: 507px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .bg-lg {
+    display: none;
+  }
+  .bg-md {
+    display: block;
+  }
+  .bg-xl {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 425px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1229,6 +1672,10 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .absolute {
     position: absolute;
@@ -1251,7 +1698,21 @@ section.footer-wrapper .footer-container {
     width: 80%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.slot {
     row-gap: 32px;
     margin: 0 auto;
@@ -1268,6 +1729,67 @@ section.footer-wrapper .footer-container {
   }
   .slot-img {
     width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 51%;
+    left: 20%;
+    transform: translate(-11%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .bg-lg {
+    display: none;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: block;
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
   }
   .absolute {
     position: absolute;
@@ -1289,6 +1811,64 @@ section.footer-wrapper .footer-container {
     border-radius: 22px;
     width: 80%;
   }
+}
+@media screen and (max-width: 375px) {
+  .myButton > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(to top, #621ff2 5%, #c638fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .myButton:active > .myButton-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.slot {
+    row-gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .bg-lg {
+    display: none;
+  }
+  .bg-md {
+    display: none;
+  }
+  .bg-xl {
+    display: block;
+  }
+  .slot-img {
+    width: 100%;
+    display: block;
+  }
+  .slot-img-xx {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+    top: 51%;
+    left: 20%;
+    transform: translate(-11%, -50%);
+  }
+  .absolute-button {
+    position: absolute;
+    top: 68%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 22px;
+    width: 80%;
+  }
+
 }
 
 /*-------------x----------------slot-machine-and-modal-----------------x---------------*/

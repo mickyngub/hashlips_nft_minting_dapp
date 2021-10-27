@@ -3,6 +3,7 @@ import cat1 from "../../assets/images/bg_slot.png";
 import cat2 from "../../assets/images/bg_slot_md.png";
 import cat3 from "../../assets/images/bg_slot_xl.png";
 import slot from "../../assets/images/slot.png";
+import slot_x from "../../assets/images/slot_xx.png";
 import icon from "../../assets/images/icon_cat.png";
 import Modal from "../../components/modal";
 
@@ -18,6 +19,7 @@ const slotmachine = () => {
       <div className="relative">
         <div className="absolute">
           <img className="slot-img" src={slot} alt="" />
+          <img className="slot-img-xx" src={slot_x} alt="" />
         </div>
         <div className="absolute-button">
           <button
