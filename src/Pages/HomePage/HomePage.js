@@ -7,6 +7,13 @@ import RoadMap from "../../components/Roadmap";
 import Team from "../../components/Team";
 import Faq from "../../components/Faq";
 
+import Nav from "../../components/layout/Nav";
+import Footer from "../../components/layout/Footer";
+import styleMain from "../../assets/styles/main.module.css";
+
+import discord from "../../assets/images/discord.png";
+import twitter from "../../assets/images/twitter.png";
+
 import cat1 from "../../assets/images/cat1.png";
 import cat2 from "../../assets/images/cat2.png";
 import cat3 from "../../assets/images/cat3.png";
@@ -16,6 +23,28 @@ import cat6 from "../../assets/images/cat6.png";
 import duedate from "../../assets/images/duedate.png";
 
 const HomePage = () => {
+  const onProps = {
+    socials: [
+      //   {
+      //     id: 1,
+      //     image: useImage('/medium.png'),
+      //     url: 'https://discord.gg/gEnvhUGh58',
+      //     text: 'meow to the moon medium',
+      //   },
+      {
+        id: 2,
+        image: discord,
+        url: "https://discord.gg/gEnvhUGh58",
+        text: "meow to the moon discord",
+      },
+      {
+        id: 3,
+        image: twitter,
+        url: "https://twitter.com/Meow2themoonNFT",
+        text: "meow to the moon twitter",
+      },
+    ],
+  };
   const ComingSoon = () => {
     return (
       <section className={style[`coming-wrapper`]}>
@@ -69,15 +98,19 @@ const HomePage = () => {
   };
   return (
     <>
-      <Banner />
-      {ComingSoon()}
-      {ProductImage()}
-      <About />
-      <Rarities />
-      <RoadMap />
-      {WhoWeAre()}
-      <Team />
-      <Faq />
+      <div className={styleMain[`main-layout`]}>
+        <Nav onProps={onProps} />
+        <Banner />
+        {ComingSoon()}
+        {ProductImage()}
+        <About />
+        <Rarities />
+        <RoadMap />
+        {WhoWeAre()}
+        <Team />
+        <Faq />
+        <Footer onProps={onProps} />
+      </div>
     </>
   );
 };
