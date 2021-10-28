@@ -9,13 +9,15 @@ import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
 import incrementButton from "../../assets/images/plus_normal.png";
+import incrementButtonHover from "../../assets/images/plus_hover.png";
 import mintButton from "../../assets/images/mint_normal.png";
 import Nav from "../../components/layout/Nav";
+import classes from "../../assets/styles/mintpage.module.css";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
-function Mint() {
+const MintPage = () => {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -178,7 +180,7 @@ function Mint() {
 
   return (
     <s.Screen image={bg_mint}>
-      <Nav transparentBg />
+      <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
         <s.SpacerSmall />
         <div flex={1} style={{ padding: 24 }} test>
@@ -229,6 +231,8 @@ function Mint() {
             <s.SpacerSmall />
           </s.Container>
 
+          <s.SpacerMedium />
+
           {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
             <>
               <s.TextTitle style={{ textAlign: "center" }}>
@@ -257,15 +261,17 @@ function Mint() {
                     Connect to the {CONFIG.NETWORK.NAME} network
                   </s.TextDescription>
                   <s.SpacerSmall />
-                  <button
+
+                  <img
+                    src={mintButton}
+                    alt="connectButton"
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(connect());
                       getData();
                     }}
-                  >
-                    CONNECT
-                  </button>
+                  />
+
                   {blockchain.errorMsg !== "" ? (
                     <>
                       <s.SpacerSmall />
@@ -308,16 +314,27 @@ function Mint() {
                       {mintAmount}
                     </s.TextDescriptionMintAmount>
                     <s.SpacerMedium />
-                    <img
-                      src={incrementButton}
-                      alt="incrementButton"
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        incrementMintAmount();
-                      }}
-                    />
-
+                    <div className={classes.incrementBox}>
+                      <div className={classes.increment}>
+                        <img
+                          // style={{ height: "87px", width: "74px" }}
+                          src={incrementButton}
+                          alt="incrementButton"
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            incrementMintAmount();
+                          }}
+                        />
+                      </div>
+                      <div className={classes.incrementHover}>
+                        <img
+                          // style={{ height: "87px", width: "74px" }}
+                          src={incrementButtonHover}
+                          alt="incrementButtonHover"
+                        />
+                      </div>
+                    </div>
                     {!claimingNft ? (
                       <img
                         src={mintButton}
@@ -369,6 +386,6 @@ function Mint() {
       </s.Container>
     </s.Screen>
   );
-}
+};
 
-export default Mint;
+export default MintPage;
