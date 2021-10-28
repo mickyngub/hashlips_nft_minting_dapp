@@ -3,8 +3,8 @@ import style from "../../assets/styles/nav.module.css";
 
 import meowLogo from "../../assets/images/logo.png";
 
-export default function Nav({ onProps }) {
-  const SOCIALS = onProps.socials;
+export default function Nav({ onProps, transparentBg }) {
+  const SOCIALS = onProps ? onProps.socials : "";
   function NavBrand() {
     return (
       <div className={style[`logo-col`]}>
@@ -40,28 +40,35 @@ export default function Nav({ onProps }) {
     return (
       <div className={style[`social-wrapper`]}>
         <div className={style[`social-col`]}>
-          {SOCIALS.map((social, index) => (
-            <a href={social.url} target="_blank" rel="nopener noreferrer">
-              <img
-                src={social.image}
-                alt={social.text}
-                key={`social.id-${index}`}
-                onClick={onProps.nextRedirect}
-                url={social.url}
-              />
-            </a>
-          ))}
+          {SOCIALS &&
+            SOCIALS.map((social, index) => (
+              <a href={social.url} target="_blank" rel="nopener noreferrer">
+                <img
+                  src={social.image}
+                  alt={social.text}
+                  key={`social.id-${index}`}
+                  onClick={onProps.nextRedirect}
+                  url={social.url}
+                />
+              </a>
+            ))}
         </div>
       </div>
     );
   }
 
   return (
-    <section className={style[`nav-container`]}>
+    <section
+      className={
+        transparentBg
+          ? style[`nav-container-transparent`]
+          : style[`nav-container`]
+      }
+    >
       <nav className={style[`nav-wrapper`]}>
         {NavBrand()}
-        {NavMenu()}
-        {NavSocial()}
+        {SOCIALS ? NavMenu() : ""}
+        {SOCIALS ? NavSocial() : ""}
       </nav>
     </section>
   );
