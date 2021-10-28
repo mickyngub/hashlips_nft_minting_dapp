@@ -1,5 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import Mint from "./Mint";
+import Mint from "./Pages/MintPage/Mint";
 import HomePage from "./Pages/HomePage/HomePage";
 
 import Nav from "./components/layout/Nav";
