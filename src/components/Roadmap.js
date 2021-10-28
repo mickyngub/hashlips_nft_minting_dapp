@@ -83,8 +83,7 @@ const ITEMS = [
       text: "The beginning of the Moon Journey",
     },
     title: "The Crew Recruitment",
-    text:
-      'The meow army wants to onboard the marvelous soldier to join the spaceship. The drop will be done on the Stealth drop 777, a series of one week stealth drops. Each day of that week, the contract will be opened up for minting for a certain period of time, in which everything will be done "stealthily"',
+    text: 'The meow army wants to onboard the marvelous soldier to join the spaceship. The drop will be done on the Stealth drop 777, a series of one week stealth drops. Each day of that week, the contract will be opened up for minting for a certain period of time, in which everything will be done "stealthily"',
     position: "1",
     is_active: true,
   },
@@ -95,8 +94,7 @@ const ITEMS = [
       text: "",
     },
     title: "The Visit of Land (777,777)",
-    text:
-      "The onboarding is done; now, the first journey of the meows is the land of trade, Openseas.  After two weeks of listing, the holders of Meow will receive a raffle every two weeks to participate in the 777 Meow machine. The machine is the slot machine where the player will be guarenteed a reward; however, it’s all up to your luck how much you would receive. The fund of slot machine will be 10% of our minting margin, which the game will continue until it runs out.",
+    text: "The onboarding is done; now, the first journey of the meows is the land of trade, Openseas.  After two weeks of listing, the holders of Meow will receive a raffle every two weeks to participate in the 777 Meow machine. The machine is the slot machine where the player will be guarenteed a reward; however, it’s all up to your luck how much you would receive. The fund of slot machine will be 10% of our minting margin, which the game will continue until it runs out.",
     position: "2",
     is_active: false,
   },
@@ -118,8 +116,7 @@ const ITEMS = [
       text: "",
     },
     title: "The Doggy Attack",
-    text:
-      "The spaceship has been attacked by the doggy army. What should we do? The MVP of the war will receive a special airdrop from the Meow’s Team",
+    text: "The spaceship has been attacked by the doggy army. What should we do? The MVP of the war will receive a special airdrop from the Meow’s Team",
     position: "4",
     is_active: false,
   },
@@ -130,8 +127,7 @@ const ITEMS = [
       text: "The Warp Port",
     },
     title: "Episode X",
-    text:
-      "The community will decide on the direction of Season 2, in which one of the planned event is to expand our metaverse into Sandbox Game so that the community can engage and build connection even further.",
+    text: "The community will decide on the direction of Season 2, in which one of the planned event is to expand our metaverse into Sandbox Game so that the community can engage and build connection even further.",
     position: "x",
     is_active: true,
   },

@@ -6,6 +6,7 @@ import slot from "../../assets/images/slot.png";
 import slot_x from "../../assets/images/slot_xx.png";
 import icon from "../../assets/images/icon_cat.png";
 import Modal from "../../components/modal";
+import slotVideo from "../../assets/video/slotvideo.mp4";
 
 const slotmachine = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -21,6 +22,17 @@ const slotmachine = () => {
           <img className="slot-img" src={slot} alt="" />
           <img className="slot-img-xx" src={slot_x} alt="" />
         </div>
+        <div className="absolute video-rounded">
+          <video
+            className="slot-video"
+            src={slotVideo}
+            width="442"
+            height="500"
+            autoPlay
+            loop
+          ></video>
+        </div>
+
         <div className="absolute-button">
           <button
             className="myButton"
@@ -36,6 +48,7 @@ const slotmachine = () => {
           <img className="bg-xl" src={cat3} alt="" />
         </section>
       </div>
+
       <Modal
         isOpen={openModal}
         description="You receive 0.0007 ETH"

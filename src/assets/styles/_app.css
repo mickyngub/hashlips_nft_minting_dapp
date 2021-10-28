@@ -880,8 +880,12 @@ section.footer-wrapper .footer-container {
   -webkit-text-fill-color: transparent;
 }
 
-
-
+.video-rounded {
+  margin-top: -6vh;
+  width: 442px;
+  border-radius: 50px;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 2560px) {
   .myButton > .myButton-text {
@@ -942,6 +946,9 @@ section.footer-wrapper .footer-container {
     border-radius: 22px;
     width: 25%;
   }
+  .slot-video {
+    /* margin-top: -90%; */
+  }
 }
 @media screen and (max-width: 2000px) {
   .myButton > .myButton-text {
@@ -982,7 +989,7 @@ section.footer-wrapper .footer-container {
   }
   .absolute-button {
     position: absolute;
-    top: 78%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1004,7 +1011,6 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 1440px) {
-  
   .myButton > .myButton-text {
     font-size: 28px;
     font-weight: 700;
@@ -1297,7 +1303,6 @@ section.footer-wrapper .footer-container {
   }
 }
 @media screen and (max-width: 1024px) {
-
   .myButton > .myButton-text {
     font-size: 28px;
     font-weight: 700;
@@ -1868,7 +1873,6 @@ section.footer-wrapper .footer-container {
     border-radius: 22px;
     width: 80%;
   }
-
 }
 
 /*-------------x----------------slot-machine-and-modal-----------------x---------------*/
