@@ -5,6 +5,9 @@ import { fetchData } from "../../redux/data/dataActions";
 import * as s from "../../assets/styles/mintGlobalStyles";
 import earlyJSON from "../../whitelist/merkleproof-earlyCookie.json";
 import xJSON from "../../whitelist/merkleproof-cookieX.json";
+import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
+import meow_profile from "../../assets/images/meowprofile.png";
+import Nav from "../../components/layout/Nav";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -14,7 +17,7 @@ function Mint() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
+  const [feedback, setFeedback] = useState(``);
   const [mintAmount, setMintAmount] = useState(1);
   const [idNumber, setIdNumber] = useState(99999);
   const [proof, setProof] = useState([]);
@@ -171,18 +174,14 @@ function Mint() {
   }, [blockchain.account]);
 
   return (
-    <s.Screen>
-      <s.Container
-        flex={1}
-        ai={"center"}
-        style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
-      >
-        <img alt={"logo"} src={"/config/images/logo.png"} />
+    <s.Screen image={bg_mint}>
+      <Nav transparentBg />
+      <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
+        {/* <img alt={"logo"} src={"/config/images/logo.png"} /> */}
         <s.SpacerSmall />
         <div flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <img alt={"example"} src={"/config/images/example.gif"} />
+            <img alt={"example"} src={meow_profile} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -201,7 +200,6 @@ function Mint() {
                 textAlign: "center",
                 fontSize: 50,
                 fontWeight: "bold",
-                color: "var(--accent-text)",
               }}
             >
               {data.totalSupply} / {CONFIG.MAX_SUPPLY}
@@ -219,14 +217,10 @@ function Mint() {
             <s.SpacerSmall />
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                <s.TextTitle style={{ textAlign: "center" }}>
                   The sale has ended.
                 </s.TextTitle>
-                <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                <s.TextDescription style={{ textAlign: "center" }}>
                   You can still find {CONFIG.NFT_NAME} on
                 </s.TextDescription>
                 <s.SpacerSmall />
@@ -236,16 +230,12 @@ function Mint() {
               </>
             ) : (
               <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                <s.TextTitle style={{ textAlign: "center" }}>
                   1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
-                <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                <s.TextDescription style={{ textAlign: "center" }}>
                   Excluding gas fees.
                 </s.TextDescription>
                 <s.SpacerSmall />
@@ -255,7 +245,6 @@ function Mint() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
                       }}
                     >
                       Connect to the {CONFIG.NETWORK.NAME} network
@@ -276,7 +265,6 @@ function Mint() {
                         <s.TextDescription
                           style={{
                             textAlign: "center",
-                            color: "var(--accent-text)",
                           }}
                         >
                           {blockchain.errorMsg}
@@ -289,7 +277,6 @@ function Mint() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
                       }}
                     >
                       {feedback}
@@ -310,7 +297,6 @@ function Mint() {
                       <s.TextDescription
                         style={{
                           textAlign: "center",
-                          color: "var(--accent-text)",
                         }}
                       >
                         {mintAmount}
@@ -359,13 +345,13 @@ function Mint() {
             <s.SpacerMedium />
           </s.Container>
           <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}>
+          {/* <s.Container flex={1} jc={"center"} ai={"center"}>
             <img
               alt={"example"}
               src={"/config/images/example.gif"}
               style={{ transform: "scaleX(-1)" }}
             />
-          </s.Container>
+          </s.Container> */}
         </div>
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
@@ -376,20 +362,9 @@ function Mint() {
             }}
           >
             Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
+            {CONFIG.NETWORK.NAME} Mainnet) and the correct address
           </s.TextDescription>
           <s.SpacerSmall />
-          <s.TextDescription
-            style={{
-              textAlign: "center",
-              color: "var(--primary-text)",
-            }}
-          >
-            We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
-          </s.TextDescription>
         </s.Container>
       </s.Container>
     </s.Screen>
