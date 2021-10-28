@@ -67,6 +67,18 @@ export const TextDescription = styled.p`
   line-height: 1.6;
 `;
 
+export const TextDescriptionMintAmount = styled.p`
+  font-family: Sriracha;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 85px;
+
+  color: #ffffff;
+  text-shadow: -1px 1px 10px #000, 1px 1px 10px #000, 1px -1px 10px #000,
+    -1px -1px 10px #000;
+`;
+
 export const StyledClickable = styled.div`
   :active {
     opacity: 0.6;
