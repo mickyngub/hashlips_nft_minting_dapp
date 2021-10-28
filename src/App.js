@@ -1,4 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
+import Mint from "./Mint";
 import HomePage from "./Pages/HomePage/HomePage";
 
 import Nav from "./components/layout/Nav";
@@ -35,6 +36,7 @@ const App = () => {
       <Nav onProps={onProps} />
       <Switch>
         <Route path="/" exact component={HomePage} />
+        <Route path="/mint" exact component={Mint} />
         <Redirect to="/" />
       </Switch>
       <Footer onProps={onProps} />

@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xb14BA3b1C1cBB3Bb2594469630636BC2F887cd66",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xb14BA3b1C1cBB3Bb2594469630636BC2F887cd66",
+  "NETWORK": {
+    "NAME": "RINKEBY",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Fortune Cookies",
+  "SYMBOL": "FTC",
+  "MAX_SUPPLY": 25,
+  "WEI_COST": 7770000000000000,
+  "DISPLAY_COST": 0.00777,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/fortunecookies-mqqupai4fv",
+  "SHOW_BACKGROUND": false
+}
