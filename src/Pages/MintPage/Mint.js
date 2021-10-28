@@ -7,6 +7,9 @@ import earlyJSON from "../../whitelist/merkleproof-earlyCookie.json";
 import xJSON from "../../whitelist/merkleproof-cookieX.json";
 import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
 import meow_profile from "../../assets/images/meowprofile.png";
+import decrementButton from "../../assets/images/minus_normal.png";
+import incrementButton from "../../assets/images/plus_normal.png";
+import mintButton from "../../assets/images/mint_normal.png";
 import Nav from "../../components/layout/Nav";
 
 const truncate = (input, len) =>
@@ -116,8 +119,8 @@ function Mint() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 10) {
-      newMintAmount = 10;
+    if (newMintAmount > 6) {
+      newMintAmount = 6;
     }
     setMintAmount(newMintAmount);
   };
@@ -177,7 +180,6 @@ function Mint() {
     <s.Screen image={bg_mint}>
       <Nav transparentBg />
       <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
-        {/* <img alt={"logo"} src={"/config/images/logo.png"} /> */}
         <s.SpacerSmall />
         <div flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -215,143 +217,141 @@ function Mint() {
               </a>
             </s.TextDescription>
             <s.SpacerSmall />
-            {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
-              <>
-                <s.TextTitle style={{ textAlign: "center" }}>
-                  The sale has ended.
-                </s.TextTitle>
-                <s.TextDescription style={{ textAlign: "center" }}>
-                  You can still find {CONFIG.NFT_NAME} on
-                </s.TextDescription>
-                <s.SpacerSmall />
-                <a target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-                  {CONFIG.MARKETPLACE}
-                </a>
-              </>
-            ) : (
-              <>
-                <s.TextTitle style={{ textAlign: "center" }}>
-                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}.
-                </s.TextTitle>
-                <s.SpacerXSmall />
-                <s.TextDescription style={{ textAlign: "center" }}>
-                  Excluding gas fees.
-                </s.TextDescription>
-                <s.SpacerSmall />
-                {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
-                  <s.Container ai={"center"} jc={"center"}>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                      }}
-                    >
-                      Connect to the {CONFIG.NETWORK.NAME} network
-                    </s.TextDescription>
-                    <s.SpacerSmall />
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        dispatch(connect());
-                        getData();
-                      }}
-                    >
-                      CONNECT
-                    </button>
-                    {blockchain.errorMsg !== "" ? (
-                      <>
-                        <s.SpacerSmall />
-                        <s.TextDescription
-                          style={{
-                            textAlign: "center",
-                          }}
-                        >
-                          {blockchain.errorMsg}
-                        </s.TextDescription>
-                      </>
-                    ) : null}
-                  </s.Container>
-                ) : (
-                  <>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                      }}
-                    >
-                      {feedback}
-                    </s.TextDescription>
-                    <s.SpacerMedium />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <button
-                        style={{ lineHeight: 0.4 }}
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </button>
-                      <s.SpacerMedium />
+            <s.SpacerMedium />
+            <s.TextTitle style={{ textAlign: "center" }}>
+              1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
+              {CONFIG.NETWORK.SYMBOL}.
+            </s.TextTitle>
+            <s.SpacerXSmall />
+            <s.TextDescription style={{ textAlign: "center" }}>
+              Excluding gas fees.
+            </s.TextDescription>
+            <s.SpacerSmall />
+          </s.Container>
+
+          {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
+            <>
+              <s.TextTitle style={{ textAlign: "center" }}>
+                All meows got adopted!.
+              </s.TextTitle>
+              <s.TextDescription style={{ textAlign: "center" }}>
+                You can still find {CONFIG.NFT_NAME} on
+              </s.TextDescription>
+              <s.SpacerSmall />
+              <a target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
+                {CONFIG.MARKETPLACE}
+              </a>
+            </>
+          ) : (
+            <>
+              {/*  start of minting function */}
+
+              {blockchain.account === "" ||
+              blockchain.smartContract === null ? (
+                <s.Container ai={"center"} jc={"center"}>
+                  <s.TextDescription
+                    style={{
+                      textAlign: "center",
+                    }}
+                  >
+                    Connect to the {CONFIG.NETWORK.NAME} network
+                  </s.TextDescription>
+                  <s.SpacerSmall />
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch(connect());
+                      getData();
+                    }}
+                  >
+                    CONNECT
+                  </button>
+                  {blockchain.errorMsg !== "" ? (
+                    <>
+                      <s.SpacerSmall />
                       <s.TextDescription
                         style={{
                           textAlign: "center",
                         }}
                       >
-                        {mintAmount}
+                        {blockchain.errorMsg}
                       </s.TextDescription>
-                      <s.SpacerMedium />
-                      <button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </button>
-                    </s.Container>
-                    <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <button
+                    </>
+                  ) : null}
+                </s.Container>
+              ) : (
+                <>
+                  <s.TextDescription
+                    style={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {feedback}
+                  </s.TextDescription>
+                  <s.SpacerMedium />
+                  <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                    <img
+                      src={decrementButton}
+                      alt="decrementButton"
+                      disabled={claimingNft ? 1 : 0}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        decrementMintAmount();
+                      }}
+                    />
+                    <s.SpacerMedium />
+                    <s.TextDescriptionMintAmount
+                      style={{
+                        textAlign: "center",
+                      }}
+                    >
+                      {mintAmount}
+                    </s.TextDescriptionMintAmount>
+                    <s.SpacerMedium />
+                    <img
+                      src={incrementButton}
+                      alt="incrementButton"
+                      disabled={claimingNft ? 1 : 0}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        incrementMintAmount();
+                      }}
+                    />
+
+                    {!claimingNft ? (
+                      <img
+                        src={mintButton}
+                        alt="mintButton"
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
                           publicMint();
                           getData();
                         }}
-                      >
-                        {claimingNft ? "BUSY" : "Mint"}
-                      </button>
-                    </s.Container>
-                    <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          preMint();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "Pre Mint"}
-                      </button>
-                    </s.Container>
-                  </>
-                )}
-              </>
-            )}
-            <s.SpacerMedium />
-          </s.Container>
+                      />
+                    ) : (
+                      "BUSY"
+                    )}
+                  </s.Container>
+                  <s.SpacerSmall />
+                  <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                    <button
+                      disabled={claimingNft ? 1 : 0}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        preMint();
+                        getData();
+                      }}
+                    >
+                      {claimingNft ? "BUSY" : "Pre Mint"}
+                    </button>
+                  </s.Container>
+                </>
+              )}
+              {/*  end of minting function */}
+            </>
+          )}
           <s.SpacerLarge />
-          {/* <s.Container flex={1} jc={"center"} ai={"center"}>
-            <img
-              alt={"example"}
-              src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
-            />
-          </s.Container> */}
         </div>
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
