@@ -3,7 +3,7 @@ import style from "../../assets/styles/nav.module.css";
 
 import meowLogo from "../../assets/images/logo.png";
 
-export default function Nav({ onProps, transparentBg }) {
+export default function Nav({ onProps, mintPage }) {
   const SOCIALS = onProps ? onProps.socials : "";
   function NavBrand() {
     return (
@@ -11,7 +11,18 @@ export default function Nav({ onProps, transparentBg }) {
         <div className={style[`logo-moons`]}>
           <img src={meowLogo} alt="logo meow to the moon" />
         </div>
-        <div className="logo-titles text--2xl text--700">Meow to the moon</div>
+        {!mintPage ? (
+          <div className="logo-titles text--2xl text--700">
+            Meow to the moon
+          </div>
+        ) : (
+          <div
+            className="logo-titles text--2xl text--700"
+            style={{ color: "white" }}
+          >
+            Meow to the moon
+          </div>
+        )}
       </div>
     );
   }
@@ -60,9 +71,7 @@ export default function Nav({ onProps, transparentBg }) {
   return (
     <section
       className={
-        transparentBg
-          ? style[`nav-container-transparent`]
-          : style[`nav-container`]
+        mintPage ? style[`nav-container-transparent`] : style[`nav-container`]
       }
     >
       <nav className={style[`nav-wrapper`]}>
