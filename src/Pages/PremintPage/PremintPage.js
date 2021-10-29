@@ -2,16 +2,17 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "../../redux/blockchain/blockchainActions";
 import { fetchData } from "../../redux/data/dataActions";
-
 import * as s from "../../assets/styles/mintGlobalStyles";
+import earlyJSON from "../../whitelist/merkleproof-earlyCookie.json";
+import xJSON from "../../whitelist/merkleproof-cookieX.json";
 import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
 import decrementButtonHover from "../../assets/images/minus_hover.png";
 import incrementButton from "../../assets/images/plus_normal.png";
 import incrementButtonHover from "../../assets/images/plus_hover.png";
-import mintButton from "../../assets/images/mint_normal.png";
-import mintButtonHover from "../../assets/images/mint_hover.png";
+import premintButton from "../../assets/images/premint_normal.png";
+import premintButtonHover from "../../assets/images/premint_hover.png";
 import connectButton from "../../assets/images/connect_normal.png";
 import connectButtonHover from "../../assets/images/connect_hover.png";
 
@@ -50,7 +51,7 @@ const MintPage = () => {
     SHOW_BACKGROUND: false,
   });
 
-  const publicMint = () => {
+  const preMint = () => {
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
@@ -61,7 +62,7 @@ const MintPage = () => {
     setClaimingNft(true);
 
     blockchain.smartContract.methods
-      .mintCookie(mintAmount)
+      .preMintCookie(mintAmount, proof, idNumber)
       .send({
         // gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -118,11 +119,36 @@ const MintPage = () => {
 
   useEffect(() => {
     getConfig();
+    // console.log(earlyJSON);
+    // console.log(xJSON);
   }, []);
 
   useEffect(() => {
     getData();
     console.log(blockchain.account);
+    let earlyWhitelist = earlyJSON["whitelist"];
+    let i = 0;
+    for (let key of Object.keys(earlyWhitelist)) {
+      // console.log(earlyWhitelist[key]["address"]);
+      if (earlyWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+        setIdNumber(i);
+        setProof(earlyWhitelist[i]["proof"]);
+        console.log("You're an early cookie", i, earlyWhitelist[i]["proof"]);
+      }
+      i++;
+    }
+
+    let xWhitelist = xJSON["whitelist"];
+    i = 0;
+    for (let key of Object.keys(xWhitelist)) {
+      // console.log(xWhitelist[key]["address"]);
+      if (xWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+        setIdNumber(i);
+        setProof(xWhitelist[i]["proof"]);
+        console.log("You're an x cookie", i, xWhitelist[i]["proof"]);
+      }
+      i++;
+    }
   }, [blockchain.account]);
 
   return (
@@ -323,8 +349,8 @@ const MintPage = () => {
                       <div className={classes.buttonBox}>
                         <div className={classes.button}>
                           <img
-                            src={mintButton}
-                            alt="mintButton"
+                            src={premintButton}
+                            alt="premintButton"
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
                               e.preventDefault();
@@ -335,8 +361,8 @@ const MintPage = () => {
                         </div>
                         <div className={classes.buttonHover}>
                           <img
-                            src={mintButtonHover}
-                            alt="mintButtonHover"
+                            src={premintButtonHover}
+                            alt="premintBUttonHover"
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
                               e.preventDefault();
