@@ -21,6 +21,7 @@ import premintButtonHover from "../../assets/images/premint_hover.png";
 import connectButton from "../../assets/images/connect_normal.png";
 import connectButtonHover from "../../assets/images/connect_hover.png";
 import presaleTitleDesktop from "../../assets/images/presale_title_desktop.png";
+import presaleTitle from "../../assets/images/pre_sale.png";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Nav from "../../components/layout/Nav";
@@ -194,11 +195,7 @@ const PremintPage = () => {
           marginTop: "5vh",
         }}
       >
-        <img
-          src={presaleTitleDesktop}
-          alt="presaleTitleDesktop"
-          width="311px"
-        />
+        <img src={presaleTitle} alt="presaleTitle" />
       </div>
       <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />

@@ -16,6 +16,7 @@ import mintButton from "../../assets/images/mint_normal.png";
 import mintButtonHover from "../../assets/images/mint_hover.png";
 import connectButton from "../../assets/images/connect_normal.png";
 import connectButtonHover from "../../assets/images/connect_hover.png";
+import publicsaleTitle from "../../assets/images/public_sale.png";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Nav from "../../components/layout/Nav";
@@ -143,19 +144,16 @@ const MintPage = () => {
   return (
     <s.Screen image={background_image}>
       <Nav mintPage screen_size={screen_size} />
-      <s.TextTitle
+      <div
         style={{
-          color: "white",
-
-          textAlign: "center",
-          marginTop: 30,
-          marginBottom: -40,
-          fontSize: 70,
-          fontWeight: "bold",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          marginTop: "5vh",
         }}
       >
-        Public Minting
-      </s.TextTitle>
+        <img src={publicsaleTitle} alt="publicsaleTitle" />
+      </div>
       <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />
         <div style={{ padding: 12 }}>
