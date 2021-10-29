@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { connect } from "../../redux/blockchain/blockchainActions";
 import { fetchData } from "../../redux/data/dataActions";
 import * as s from "../../assets/styles/mintGlobalStyles";
-import earlyJSON from "../../whitelist/merkleproof-earlyCookie.json";
-import xJSON from "../../whitelist/merkleproof-cookieX.json";
+
+import earlyMeowJSON from "../../whitelist/merkleproof-earlyMeow.json";
+import meowJuniorJSON from "../../whitelist/merkleproof-meowJunior.json";
+
 import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
@@ -94,8 +96,8 @@ const MintPage = () => {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 6) {
-      newMintAmount = 6;
+    if (newMintAmount > 3) {
+      newMintAmount = 3;
     }
     setMintAmount(newMintAmount);
   };
@@ -119,33 +121,37 @@ const MintPage = () => {
 
   useEffect(() => {
     getConfig();
-    // console.log(earlyJSON);
-    // console.log(xJSON);
   }, []);
 
   useEffect(() => {
     getData();
     console.log(blockchain.account);
-    let earlyWhitelist = earlyJSON["whitelist"];
+    let earlyMeowWhitelist = earlyMeowJSON["whitelist"];
     let i = 0;
-    for (let key of Object.keys(earlyWhitelist)) {
-      // console.log(earlyWhitelist[key]["address"]);
-      if (earlyWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+    for (let key of Object.keys(earlyMeowWhitelist)) {
+      if (
+        earlyMeowWhitelist[key]["address"].toLowerCase() == blockchain.account
+      ) {
         setIdNumber(i);
-        setProof(earlyWhitelist[i]["proof"]);
-        console.log("You're an early cookie", i, earlyWhitelist[i]["proof"]);
+        setProof(earlyMeowWhitelist[i]["proof"]);
+        console.log(
+          "You're an early cookie",
+          i,
+          earlyMeowWhitelist[i]["proof"]
+        );
       }
       i++;
     }
 
-    let xWhitelist = xJSON["whitelist"];
+    let meowJuniorWhitelist = meowJuniorJSON["whitelist"];
     i = 0;
-    for (let key of Object.keys(xWhitelist)) {
-      // console.log(xWhitelist[key]["address"]);
-      if (xWhitelist[key]["address"].toLowerCase() == blockchain.account) {
+    for (let key of Object.keys(meowJuniorWhitelist)) {
+      if (
+        meowJuniorWhitelist[key]["address"].toLowerCase() == blockchain.account
+      ) {
         setIdNumber(i);
-        setProof(xWhitelist[i]["proof"]);
-        console.log("You're an x cookie", i, xWhitelist[i]["proof"]);
+        setProof(meowJuniorWhitelist[i]["proof"]);
+        console.log("You're an x cookie", i, meowJuniorWhitelist[i]["proof"]);
       }
       i++;
     }
