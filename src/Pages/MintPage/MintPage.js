@@ -127,6 +127,20 @@ const MintPage = () => {
 
   return (
     <s.Screen image={bg_mint}>
+      <s.TextTitle
+        style={{
+          color: "white",
+
+          textAlign: "center",
+          marginTop: 30,
+          marginBottom: -40,
+          fontSize: 70,
+          fontWeight: "bold",
+          WebkitTextStroke: "4px #00005A",
+        }}
+      >
+        Public Minting
+      </s.TextTitle>
       <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
         <s.SpacerSmall />
@@ -140,10 +154,10 @@ const MintPage = () => {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
+              backgroundColor: "white",
               padding: 24,
               borderRadius: 24,
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+              border: "4px solid #3730A3",
             }}
           >
             <s.TextTitle
@@ -168,7 +182,8 @@ const MintPage = () => {
             <s.SpacerSmall />
             <s.SpacerMedium />
             <s.TextTitle style={{ textAlign: "center" }}>
-              1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
+              {mintAmount} {CONFIG.SYMBOL} costs{" "}
+              {(CONFIG.DISPLAY_COST * mintAmount).toFixed(4)}{" "}
               {CONFIG.NETWORK.SYMBOL}.
             </s.TextTitle>
             <s.SpacerXSmall />
@@ -288,6 +303,7 @@ const MintPage = () => {
                     <s.TextDescriptionMintAmount
                       style={{
                         textAlign: "center",
+                        width: 35,
                       }}
                     >
                       {mintAmount}
@@ -347,7 +363,9 @@ const MintPage = () => {
                         </div>
                       </div>
                     ) : (
-                      <Spinner />
+                      <div style={{ width: "241px" }}>
+                        <Spinner />
+                      </div>
                     )}
                   </s.Container>
                   <s.SpacerSmall />
