@@ -13,6 +13,12 @@ section.nav-container-transparent {
   padding: 30px 0 0 50px;
 }
 
+section.nav-container-transparent-block {
+  width: 100vw;
+  position: block;
+  padding: 30px 0 0 50px;
+}
+
 .nav-wrapper {
   width: var(--container);
   height: 64px;

@@ -3,7 +3,7 @@ import style from "../../assets/styles/nav.module.css";
 
 import meowLogo from "../../assets/images/logo.png";
 
-export default function Nav({ onProps, mintPage }) {
+export default function Nav({ onProps, mintPage, screen_size }) {
   const SOCIALS = onProps ? onProps.socials : "";
   function NavBrand() {
     return (
@@ -15,13 +15,15 @@ export default function Nav({ onProps, mintPage }) {
           <div className="logo-titles text--2xl text--700">
             Meow to the moon
           </div>
-        ) : (
+        ) : screen_size == "macbook" ? (
           <div
             className="logo-titles text--2xl text--700"
             style={{ color: "white" }}
           >
             Meow to the moon
           </div>
+        ) : (
+          ""
         )}
       </div>
     );
@@ -71,7 +73,11 @@ export default function Nav({ onProps, mintPage }) {
   return (
     <section
       className={
-        mintPage ? style[`nav-container-transparent`] : style[`nav-container`]
+        !mintPage
+          ? style[`nav-container`]
+          : screen_size == "macbook"
+          ? style[`nav-container-transparent`]
+          : style[`nav-container-transparent-block`]
       }
     >
       <nav className={style[`nav-wrapper`]}>
