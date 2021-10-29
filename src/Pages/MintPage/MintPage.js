@@ -130,7 +130,7 @@ const MintPage = () => {
       <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
         <s.SpacerSmall />
-        <div flex={1} style={{ padding: 24 }} test>
+        <div style={{ padding: 24 }}>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <img alt={"example"} src={meow_profile} />
           </s.Container>
@@ -153,7 +153,7 @@ const MintPage = () => {
                 fontWeight: "bold",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              {data.totalSupply ? data.totalSupply : "?"} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
