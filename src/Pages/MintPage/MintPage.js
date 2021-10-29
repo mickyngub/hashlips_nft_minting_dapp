@@ -4,7 +4,9 @@ import { connect } from "../../redux/blockchain/blockchainActions";
 import { fetchData } from "../../redux/data/dataActions";
 
 import * as s from "../../assets/styles/mintGlobalStyles";
-import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
+import mint_bg_macbook from "../../assets/images/mint_bg_macbook.png";
+import mint_bg_iphone from "../../assets/images/mint_bg_iphone.png";
+import mint_bg_ipad_mini from "../../assets/images/mint_bg_ipad_mini.png";
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
 import decrementButtonHover from "../../assets/images/minus_hover.png";
@@ -15,6 +17,7 @@ import mintButtonHover from "../../assets/images/mint_hover.png";
 import connectButton from "../../assets/images/connect_normal.png";
 import connectButtonHover from "../../assets/images/connect_hover.png";
 
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Nav from "../../components/layout/Nav";
 import classes from "../../assets/styles/mintpage.module.css";
 import Spinner from "../../components/Spinner";
@@ -23,6 +26,7 @@ const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
 const MintPage = () => {
+  const { height, width } = useWindowDimensions();
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -116,6 +120,13 @@ const MintPage = () => {
     SET_CONFIG(config);
   };
 
+  const background_image =
+    width < 768
+      ? mint_bg_iphone
+      : width < 1368
+      ? mint_bg_ipad_mini
+      : mint_bg_macbook;
+
   useEffect(() => {
     getConfig();
   }, []);
@@ -126,7 +137,7 @@ const MintPage = () => {
   }, [blockchain.account]);
 
   return (
-    <s.Screen image={bg_mint}>
+    <s.Screen image={background_image}>
       <s.TextTitle
         style={{
           color: "white",
@@ -136,7 +147,6 @@ const MintPage = () => {
           marginBottom: -40,
           fontSize: 70,
           fontWeight: "bold",
-          WebkitTextStroke: "4px #00005A",
         }}
       >
         Public Minting

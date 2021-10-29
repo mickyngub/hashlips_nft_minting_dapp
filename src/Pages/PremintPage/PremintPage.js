@@ -7,7 +7,10 @@ import * as s from "../../assets/styles/mintGlobalStyles";
 import earlyMeowJSON from "../../whitelist/merkleproof-earlyMeow.json";
 import meowJuniorJSON from "../../whitelist/merkleproof-meowJunior.json";
 
-import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
+import mint_bg_macbook from "../../assets/images/mint_bg_macbook.png";
+import mint_bg_iphone from "../../assets/images/mint_bg_iphone.png";
+import mint_bg_ipad_mini from "../../assets/images/mint_bg_ipad_mini.png";
+
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
 import decrementButtonHover from "../../assets/images/minus_hover.png";
@@ -17,7 +20,9 @@ import premintButton from "../../assets/images/premint_normal.png";
 import premintButtonHover from "../../assets/images/premint_hover.png";
 import connectButton from "../../assets/images/connect_normal.png";
 import connectButtonHover from "../../assets/images/connect_hover.png";
+import presaleTitleDesktop from "../../assets/images/presale_title_desktop.png";
 
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Nav from "../../components/layout/Nav";
 import classes from "../../assets/styles/mintpage.module.css";
 import Spinner from "../../components/Spinner";
@@ -25,7 +30,8 @@ import Spinner from "../../components/Spinner";
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
-const MintPage = () => {
+const PremintPage = () => {
+  const { height, width } = useWindowDimensions();
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -123,6 +129,13 @@ const MintPage = () => {
     getConfig();
   }, []);
 
+  const background_image =
+    width < 768
+      ? mint_bg_iphone
+      : width < 1368
+      ? mint_bg_ipad_mini
+      : mint_bg_macbook;
+
   useEffect(() => {
     getData();
     console.log(blockchain.account);
@@ -154,8 +167,8 @@ const MintPage = () => {
   }, [blockchain.account]);
 
   return (
-    <s.Screen image={bg_mint}>
-      <s.TextTitle
+    <s.Screen image={background_image}>
+      {/* <s.TextTitle
         style={{
           color: "white",
           textAlign: "center",
@@ -163,11 +176,24 @@ const MintPage = () => {
           marginBottom: -40,
           fontSize: 70,
           fontWeight: "bold",
-          WebkitTextStroke: "4px #00005A",
         }}
       >
         Pre-sale Minting
-      </s.TextTitle>
+      </s.TextTitle> */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          marginTop: "5vh",
+        }}
+      >
+        <img
+          src={presaleTitleDesktop}
+          alt="presaleTitleDesktop"
+          width="311px"
+        />
+      </div>
       <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />
@@ -456,4 +482,4 @@ const MintPage = () => {
   );
 };
 
-export default MintPage;
+export default PremintPage;
