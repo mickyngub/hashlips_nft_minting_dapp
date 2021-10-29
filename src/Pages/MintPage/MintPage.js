@@ -142,6 +142,7 @@ const MintPage = () => {
 
   return (
     <s.Screen image={background_image}>
+      <Nav mintPage screen_size={screen_size} />
       <s.TextTitle
         style={{
           color: "white",
@@ -155,7 +156,6 @@ const MintPage = () => {
       >
         Public Minting
       </s.TextTitle>
-      <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />
         <div style={{ padding: 12 }}>
@@ -286,7 +286,7 @@ const MintPage = () => {
           {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
             <>
               <s.TextTitle style={{ textAlign: "center" }}>
-                All meows got adopted!.
+                All meows got adopted!
               </s.TextTitle>
               <s.TextDescription style={{ textAlign: "center" }}>
                 You can still find {CONFIG.NFT_NAME} on

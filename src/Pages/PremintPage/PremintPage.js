@@ -184,6 +184,8 @@ const PremintPage = () => {
       >
         Pre-sale Minting
       </s.TextTitle> */}
+
+      <Nav mintPage screen_size={screen_size} />
       <div
         style={{
           display: "flex",
@@ -198,7 +200,6 @@ const PremintPage = () => {
           width="311px"
         />
       </div>
-      <Nav mintPage />
       <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />
         <div style={{ padding: 12 }}>
@@ -330,7 +331,7 @@ const PremintPage = () => {
           {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
             <>
               <s.TextTitle style={{ textAlign: "center" }}>
-                All meows got adopted!.
+                All meows got adopted!
               </s.TextTitle>
               <s.TextDescription style={{ textAlign: "center" }}>
                 You can still find {CONFIG.NFT_NAME} on
