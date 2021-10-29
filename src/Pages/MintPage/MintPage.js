@@ -120,12 +120,16 @@ const MintPage = () => {
     SET_CONFIG(config);
   };
 
+  const screen_size =
+    width < 768 ? "iphone" : width < 1368 ? "ipad_mini" : "macbook";
   const background_image =
-    width < 768
+    screen_size == "iphone"
       ? mint_bg_iphone
-      : width < 1368
+      : screen_size == "ipad_mini"
       ? mint_bg_ipad_mini
-      : mint_bg_macbook;
+      : screen_size == "macbook"
+      ? mint_bg_macbook
+      : "";
 
   useEffect(() => {
     getConfig();
@@ -168,12 +172,23 @@ const MintPage = () => {
               padding: 12,
               borderRadius: 24,
               border: "4px solid #3730A3",
+              width:
+                screen_size == "iphone"
+                  ? "80vw"
+                  : screen_size == "ipad_mini"
+                  ? "70vw"
+                  : "40vw",
             }}
           >
             <s.TextTitle
               style={{
                 textAlign: "center",
-                fontSize: 50,
+                fontSize:
+                  screen_size == "iphone"
+                    ? 24
+                    : screen_size == "ipad_mini"
+                    ? 35
+                    : 50,
                 fontWeight: "bold",
               }}
             >
@@ -183,7 +198,12 @@ const MintPage = () => {
             <s.TextTitle
               style={{
                 textAlign: "center",
-                fontSize: 40,
+                fontSize:
+                  screen_size == "iphone"
+                    ? 20
+                    : screen_size == "ipad_mini"
+                    ? 30
+                    : 40,
                 fontWeight: "bold",
                 color: "#621FF2",
               }}
@@ -194,6 +214,12 @@ const MintPage = () => {
               style={{
                 textAlign: "center",
                 color: "var(--primary-text)",
+                fontSize:
+                  screen_size == "iphone"
+                    ? 12
+                    : screen_size == "ipad_mini"
+                    ? 15
+                    : 20,
               }}
             >
               <a
@@ -206,7 +232,17 @@ const MintPage = () => {
             </s.TextDescription>
             <s.SpacerSmall />
             <s.SpacerMedium />
-            <s.TextTitle style={{ textAlign: "center" }}>
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize:
+                  screen_size == "iphone"
+                    ? 16
+                    : screen_size == "ipad_mini"
+                    ? 18
+                    : 25,
+              }}
+            >
               {mintAmount} MeowToTheMoon costs{" "}
               {(CONFIG.DISPLAY_COST * mintAmount).toFixed(4)}{" "}
               {CONFIG.NETWORK.SYMBOL} + gas fees
@@ -216,7 +252,12 @@ const MintPage = () => {
               style={{
                 color: "black",
                 textAlign: "center",
-                fontSize: 20,
+                fontSize:
+                  screen_size == "iphone"
+                    ? 12
+                    : screen_size == "ipad_mini"
+                    ? 15
+                    : 20,
                 color: "#5B6370",
               }}
             >
@@ -226,6 +267,12 @@ const MintPage = () => {
               style={{
                 color: "black",
                 textAlign: "center",
+                fontSize:
+                  screen_size == "iphone"
+                    ? 12
+                    : screen_size == "ipad_mini"
+                    ? 15
+                    : 20,
                 fontSize: 20,
                 color: "#5B6370",
               }}
