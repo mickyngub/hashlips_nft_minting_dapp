@@ -354,7 +354,7 @@ const MintPage = () => {
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
                               e.preventDefault();
-                              publicMint();
+                              preMint();
                               getData();
                             }}
                           />
@@ -366,7 +366,7 @@ const MintPage = () => {
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
                               e.preventDefault();
-                              publicMint();
+                              preMint();
                               getData();
                             }}
                           />
