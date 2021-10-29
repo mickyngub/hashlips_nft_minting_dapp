@@ -142,9 +142,9 @@ const MintPage = () => {
         Public Minting
       </s.TextTitle>
       <Nav mintPage />
-      <s.Container flex={1} ai={"center"} style={{ padding: 24 }}>
+      <s.Container flex={1} ai={"center"} style={{ padding: 12 }}>
         <s.SpacerSmall />
-        <div style={{ padding: 24 }}>
+        <div style={{ padding: 12 }}>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <img alt={"example"} src={meow_profile} />
           </s.Container>
@@ -155,7 +155,7 @@ const MintPage = () => {
             ai={"center"}
             style={{
               backgroundColor: "white",
-              padding: 24,
+              padding: 12,
               borderRadius: 24,
               border: "4px solid #3730A3",
             }}
@@ -167,6 +167,17 @@ const MintPage = () => {
                 fontWeight: "bold",
               }}
             >
+              {" "}
+              Meow Supply
+            </s.TextTitle>
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 40,
+                fontWeight: "bold",
+                color: "#621FF2",
+              }}
+            >
               {data.totalSupply ? data.totalSupply : "?"} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
@@ -175,22 +186,42 @@ const MintPage = () => {
                 color: "var(--primary-text)",
               }}
             >
-              <a target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+              <a
+                target={"_blank"}
+                href={CONFIG.SCAN_LINK}
+                rel="noopener noreferrer"
+              >
+                Contract Address: {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </a>
             </s.TextDescription>
             <s.SpacerSmall />
             <s.SpacerMedium />
             <s.TextTitle style={{ textAlign: "center" }}>
-              {mintAmount} {CONFIG.SYMBOL} costs{" "}
+              {mintAmount} MeowToTheMoon costs{" "}
               {(CONFIG.DISPLAY_COST * mintAmount).toFixed(4)}{" "}
-              {CONFIG.NETWORK.SYMBOL}.
+              {CONFIG.NETWORK.SYMBOL} + gas fees
             </s.TextTitle>
             <s.SpacerXSmall />
-            <s.TextDescription style={{ textAlign: "center" }}>
-              Excluding gas fees.
-            </s.TextDescription>
-            <s.SpacerSmall />
+            <s.TextSubTitle
+              style={{
+                color: "black",
+                textAlign: "center",
+                fontSize: 20,
+                color: "#5B6370",
+              }}
+            >
+              Max 6 Meows Per Transaction
+            </s.TextSubTitle>
+            <s.TextSubTitle
+              style={{
+                color: "black",
+                textAlign: "center",
+                fontSize: 20,
+                color: "#5B6370",
+              }}
+            >
+              Max 7 Meows Per Wallet
+            </s.TextSubTitle>
           </s.Container>
 
           <s.SpacerMedium />
@@ -204,7 +235,11 @@ const MintPage = () => {
                 You can still find {CONFIG.NFT_NAME} on
               </s.TextDescription>
               <s.SpacerSmall />
-              <a target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
+              <a
+                target={"_blank"}
+                href={CONFIG.MARKETPLACE_LINK}
+                rel="noopener noreferrer"
+              >
                 {CONFIG.MARKETPLACE}
               </a>
             </>
@@ -215,14 +250,13 @@ const MintPage = () => {
               {blockchain.account === "" ||
               blockchain.smartContract === null ? (
                 <s.Container ai={"center"} jc={"center"}>
-                  <s.TextDescription
+                  {/* <s.TextDescription
                     style={{
                       textAlign: "center",
                     }}
                   >
                     Connect to the {CONFIG.NETWORK.NAME} network
-                  </s.TextDescription>
-                  <s.SpacerSmall />
+                  </s.TextDescription> */}
 
                   <div className={classes.buttonBox}>
                     <div className={classes.button}>
@@ -267,11 +301,11 @@ const MintPage = () => {
                   <s.TextDescription
                     style={{
                       textAlign: "center",
+                      color: "white",
                     }}
                   >
                     {feedback}
                   </s.TextDescription>
-                  <s.SpacerMedium />
                   <s.Container ai={"center"} jc={"center"} fd={"row"}>
                     <div className={classes.buttonBox}>
                       <div className={classes.button}>
@@ -368,17 +402,14 @@ const MintPage = () => {
                       </div>
                     )}
                   </s.Container>
-                  <s.SpacerSmall />
                 </>
               )}
               {/*  end of minting function */}
             </>
           )}
-          <s.SpacerLarge />
         </div>
-        <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
-          <s.TextDescription
+          {/* <s.TextDescription
             style={{
               textAlign: "center",
               color: "var(--primary-text)",
@@ -386,8 +417,7 @@ const MintPage = () => {
           >
             Please make sure you are connected to the right network (
             {CONFIG.NETWORK.NAME} Mainnet) and the correct address
-          </s.TextDescription>
-          <s.SpacerSmall />
+          </s.TextDescription> */}
         </s.Container>
       </s.Container>
     </s.Screen>
