@@ -1,9 +1,9 @@
-.incrementBox {
+.buttonBox {
   position: relative;
   float: left;
 }
 
-.incrementBox .incrementHover {
+.buttonBox .buttonHover {
   position: absolute;
   left: 0;
   top: 0;
@@ -11,10 +11,10 @@
   transition: all 1s ease;
 }
 
-.incrementBox:hover .incrementHover {
+.buttonBox:hover .buttonHover {
   opacity: 1;
   transition: all 1s ease;
 }
 
-.increment {
+.button {
 }

@@ -8,11 +8,17 @@ import xJSON from "../../whitelist/merkleproof-cookieX.json";
 import bg_mint from "../../assets/images/mint_bg_macbook.jpg";
 import meow_profile from "../../assets/images/meowprofile.png";
 import decrementButton from "../../assets/images/minus_normal.png";
+import decrementButtonHover from "../../assets/images/minus_hover.png";
 import incrementButton from "../../assets/images/plus_normal.png";
 import incrementButtonHover from "../../assets/images/plus_hover.png";
 import mintButton from "../../assets/images/mint_normal.png";
+import mintButtonHover from "../../assets/images/mint_hover.png";
+import connectButton from "../../assets/images/connect_normal.png";
+import connectButtonHover from "../../assets/images/connect_hover.png";
+
 import Nav from "../../components/layout/Nav";
 import classes from "../../assets/styles/mintpage.module.css";
+import Spinner from "../../components/Spinner";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -262,15 +268,30 @@ const MintPage = () => {
                   </s.TextDescription>
                   <s.SpacerSmall />
 
-                  <img
-                    src={mintButton}
-                    alt="connectButton"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      dispatch(connect());
-                      getData();
-                    }}
-                  />
+                  <div className={classes.buttonBox}>
+                    <div className={classes.button}>
+                      <img
+                        src={connectButton}
+                        alt="connectButton"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          dispatch(connect());
+                          getData();
+                        }}
+                      />
+                    </div>
+                    <div className={classes.buttonHover}>
+                      <img
+                        src={connectButtonHover}
+                        alt="connectButtonHover"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          dispatch(connect());
+                          getData();
+                        }}
+                      />
+                    </div>
+                  </div>
 
                   {blockchain.errorMsg !== "" ? (
                     <>
@@ -296,15 +317,32 @@ const MintPage = () => {
                   </s.TextDescription>
                   <s.SpacerMedium />
                   <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                    <img
-                      src={decrementButton}
-                      alt="decrementButton"
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        decrementMintAmount();
-                      }}
-                    />
+                    <div className={classes.buttonBox}>
+                      <div className={classes.button}>
+                        <img
+                          src={decrementButton}
+                          alt="decrementButton"
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            decrementMintAmount();
+                          }}
+                        />
+                      </div>
+                      <div className={classes.buttonHover}>
+                        <img
+                          // style={{ height: "87px", width: "74px" }}
+                          src={decrementButtonHover}
+                          alt="decrementButtonHover"
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            decrementMintAmount();
+                          }}
+                        />
+                      </div>
+                    </div>
+
                     <s.SpacerMedium />
                     <s.TextDescriptionMintAmount
                       style={{
@@ -314,8 +352,8 @@ const MintPage = () => {
                       {mintAmount}
                     </s.TextDescriptionMintAmount>
                     <s.SpacerMedium />
-                    <div className={classes.incrementBox}>
-                      <div className={classes.increment}>
+                    <div className={classes.buttonBox}>
+                      <div className={classes.button}>
                         <img
                           // style={{ height: "87px", width: "74px" }}
                           src={incrementButton}
@@ -327,27 +365,48 @@ const MintPage = () => {
                           }}
                         />
                       </div>
-                      <div className={classes.incrementHover}>
+                      <div className={classes.buttonHover}>
                         <img
                           // style={{ height: "87px", width: "74px" }}
                           src={incrementButtonHover}
                           alt="incrementButtonHover"
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            incrementMintAmount();
+                          }}
                         />
                       </div>
                     </div>
                     {!claimingNft ? (
-                      <img
-                        src={mintButton}
-                        alt="mintButton"
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          publicMint();
-                          getData();
-                        }}
-                      />
+                      <div className={classes.buttonBox}>
+                        <div className={classes.button}>
+                          <img
+                            src={mintButton}
+                            alt="mintButton"
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              publicMint();
+                              getData();
+                            }}
+                          />
+                        </div>
+                        <div className={classes.buttonHover}>
+                          <img
+                            src={mintButtonHover}
+                            alt="mintButtonHover"
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              publicMint();
+                              getData();
+                            }}
+                          />
+                        </div>
+                      </div>
                     ) : (
-                      "BUSY"
+                      <Spinner />
                     )}
                   </s.Container>
                   <s.SpacerSmall />
