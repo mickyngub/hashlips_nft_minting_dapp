@@ -34,8 +34,6 @@ const MintPage = () => {
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(``);
   const [mintAmount, setMintAmount] = useState(1);
-  const [idNumber, setIdNumber] = useState(99999);
-  const [proof, setProof] = useState([]);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
