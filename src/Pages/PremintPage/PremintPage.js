@@ -11,7 +11,7 @@ import mint_bg_macbook from "../../assets/images/mint_bg_macbook.png";
 import mint_bg_iphone from "../../assets/images/mint_bg_iphone.png";
 import mint_bg_ipad_mini from "../../assets/images/mint_bg_ipad_mini.png";
 
-import meow_profile from "../../assets/images/meowprofile.png";
+import meow_profile_gif from "../../assets/images/meow_profile_gif.gif";
 import decrementButton from "../../assets/images/minus_normal.png";
 import decrementButtonHover from "../../assets/images/minus_hover.png";
 import incrementButton from "../../assets/images/plus_normal.png";
@@ -215,7 +215,12 @@ const PremintPage = () => {
         <s.SpacerSmall />
         <div style={{ padding: 12 }}>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <img alt={"example"} src={meow_profile} />
+            <img
+              alt={"example"}
+              src={meow_profile_gif}
+              width="240px"
+              style={{ borderRadius: "22px" }}
+            />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
