@@ -40,6 +40,7 @@ const PremintPage = () => {
   const [feedback, setFeedback] = useState(``);
   const [mintAmount, setMintAmount] = useState(1);
   const [idNumber, setIdNumber] = useState(99999);
+  const [meowType, setMeowType] = useState("");
   const [proof, setProof] = useState([]);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -103,9 +104,20 @@ const PremintPage = () => {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 3) {
-      newMintAmount = 3;
+    if (meowType === "earlyMeow") {
+      if (newMintAmount > 5) {
+        newMintAmount = 5;
+      }
+    } else if (meowType === "meowJunior") {
+      if (newMintAmount > 4) {
+        newMintAmount = 4;
+      }
+    } else {
+      if (newMintAmount > 1) {
+        newMintAmount = 1;
+      }
     }
+
     setMintAmount(newMintAmount);
   };
 
@@ -152,6 +164,7 @@ const PremintPage = () => {
       ) {
         setIdNumber(i);
         setProof(earlyMeowWhitelist[i]["proof"]);
+        setMeowType("earlyMeow");
         console.log("You're an earlyMeow", i, earlyMeowWhitelist[i]["proof"]);
       }
       i++;
@@ -165,6 +178,7 @@ const PremintPage = () => {
       ) {
         setIdNumber(i);
         setProof(meowJuniorWhitelist[i]["proof"]);
+        setMeowType("meowJunior");
         console.log("You're a meowJunior", i, meowJuniorWhitelist[i]["proof"]);
       }
       i++;
