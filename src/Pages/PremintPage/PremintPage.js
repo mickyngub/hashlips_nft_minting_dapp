@@ -362,7 +362,18 @@ const PremintPage = () => {
 
               {blockchain.account === "" ||
               blockchain.smartContract === null ? (
-                <s.Container ai={"center"} jc={"center"}>
+                <s.Container
+                  ai={"center"}
+                  jc={"center"}
+                  style={{
+                    width:
+                      screen_size == "iphone"
+                        ? "80vw"
+                        : screen_size == "ipad_mini"
+                        ? "70vw"
+                        : "40vw",
+                  }}
+                >
                   {/* <s.TextDescription
                     style={{
                       textAlign: "center",
@@ -419,7 +430,19 @@ const PremintPage = () => {
                   >
                     {feedback}
                   </s.TextDescription>
-                  <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                  <s.Container
+                    ai={"center"}
+                    jc={"center"}
+                    fd={"row"}
+                    style={{
+                      width:
+                        screen_size == "iphone"
+                          ? "80vw"
+                          : screen_size == "ipad_mini"
+                          ? "70vw"
+                          : "40vw",
+                    }}
+                  >
                     <div className={classes.buttonBox}>
                       <div className={classes.button}>
                         <img
