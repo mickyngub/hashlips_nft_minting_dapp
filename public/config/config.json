@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0xb14BA3b1C1cBB3Bb2594469630636BC2F887cd66",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xb14BA3b1C1cBB3Bb2594469630636BC2F887cd66",
+  "CONTRACT_ADDRESS": "0x237e1463cd81D3567fF1485ef2fC7c6521B316c9",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x237e1463cd81D3567fF1485ef2fC7c6521B316c9",
   "NETWORK": {
     "NAME": "RINKEBY",
     "SYMBOL": "ETH",
@@ -12,7 +12,7 @@
   "WEI_COST": 77700000000000000,
   "DISPLAY_COST": 0.0777,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/fortunecookies-mqqupai4fv",
+  "MARKETPLACE": "Opensea",
+  "MARKETPLACE_LINK": "",
   "SHOW_BACKGROUND": false
 }

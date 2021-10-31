@@ -129,7 +129,21 @@
   },
   {
     "inputs": [],
-    "name": "MAX_COOKIES_SUPPLY",
+    "name": "LIMIT_PRE_MINT_EARLY_MEOW",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "LIMIT_PRE_MINT_MEOW_JUNIOR",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MAX_MEOWS_SUPPLY",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
@@ -151,20 +165,6 @@
   {
     "inputs": [],
     "name": "MAX_PRE_MINT_RESERVED",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "NUM_PRE_MINT_COOKIE_X",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "NUM_PRE_MINT_EARLY_COOKIE",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
@@ -212,15 +212,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getCookiePreMint",
-    "outputs": [
-      { "internalType": "uint256", "name": "amount", "type": "uint256" }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       { "internalType": "address", "name": "owner", "type": "address" },
       { "internalType": "address", "name": "operator", "type": "address" }
@@ -235,7 +226,7 @@
       { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
       { "internalType": "uint256", "name": "_number", "type": "uint256" }
     ],
-    "name": "isEligibleCookieX",
+    "name": "isEligibleEarlyMeow",
     "outputs": [
       { "internalType": "bool", "name": "isEligible", "type": "bool" }
     ],
@@ -247,7 +238,7 @@
       { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
       { "internalType": "uint256", "name": "_number", "type": "uint256" }
     ],
-    "name": "isEligibleEarlyCookie",
+    "name": "isEligibleMeowJunior",
     "outputs": [
       { "internalType": "bool", "name": "isEligible", "type": "bool" }
     ],
@@ -258,7 +249,7 @@
     "inputs": [
       { "internalType": "uint256", "name": "amountPurchase", "type": "uint256" }
     ],
-    "name": "mintCookie",
+    "name": "mintMeow",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
@@ -267,7 +258,7 @@
     "inputs": [
       { "internalType": "uint256", "name": "amountMint", "type": "uint256" }
     ],
-    "name": "mintUnsoldCookie",
+    "name": "mintUnsoldMeow",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -319,7 +310,7 @@
       { "internalType": "bytes32[]", "name": "proof", "type": "bytes32[]" },
       { "internalType": "uint256", "name": "_number", "type": "uint256" }
     ],
-    "name": "preMintCookie",
+    "name": "preMintMeow",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
@@ -333,14 +324,14 @@
   },
   {
     "inputs": [],
-    "name": "rootCookieX",
+    "name": "rootEarlyMeow",
     "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "rootEarlyCookie",
+    "name": "rootMeowJunior",
     "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
@@ -417,9 +408,9 @@
   },
   {
     "inputs": [
-      { "internalType": "bytes32", "name": "_rootCookieX", "type": "bytes32" }
+      { "internalType": "bytes32", "name": "_rootEarlyMeow", "type": "bytes32" }
     ],
-    "name": "setRootCookieX",
+    "name": "setRootEarlyMeow",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -428,11 +419,11 @@
     "inputs": [
       {
         "internalType": "bytes32",
-        "name": "_rootEarlyCookie",
+        "name": "_rootMeowJunior",
         "type": "bytes32"
       }
     ],
-    "name": "setRootEarlyCookie",
+    "name": "setRootMeowJunior",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
