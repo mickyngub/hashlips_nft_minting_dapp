@@ -64,7 +64,7 @@ const MintPage = () => {
     setClaimingNft(true);
 
     blockchain.smartContract.methods
-      .mintCookie(mintAmount)
+      .mintMeow(mintAmount)
       .send({
         // gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,

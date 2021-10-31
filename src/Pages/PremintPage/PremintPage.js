@@ -72,7 +72,7 @@ const PremintPage = () => {
     setClaimingNft(true);
 
     blockchain.smartContract.methods
-      .preMintCookie(mintAmount, proof, idNumber)
+      .preMintMeow(mintAmount, proof, idNumber)
       .send({
         // gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -321,7 +321,7 @@ const PremintPage = () => {
                 color: "#5B6370",
               }}
             >
-              777 Early Meows - Max 3 Meows Per Wallet
+              777 Early Meows - Max 5 Meows Per Wallet
             </s.TextSubTitle>
             <s.TextSubTitle
               style={{
@@ -336,7 +336,7 @@ const PremintPage = () => {
                 color: "#5B6370",
               }}
             >
-              223 Meow Juniors - Max 2 Meows Per Wallet
+              223 Meow Juniors - Max 4 Meows Per Wallet
             </s.TextSubTitle>
             <s.TextTitle style={{ textAlign: "center" }}></s.TextTitle>
             <s.SpacerSmall />
