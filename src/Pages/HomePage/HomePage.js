@@ -1,4 +1,6 @@
 import React from "react";
+import Countdown from "react-countdown";
+
 import style from "../../assets/styles/index.module.css";
 import Banner from "../../components/Banner";
 import About from "../../components/About";
@@ -46,11 +48,61 @@ const HomePage = () => {
     ],
   };
   const ComingSoon = () => {
+    const Completionist = () => (
+      <>
+        <div>
+          <h2 className={style.countdown}>
+            Check the link in Discord announcement!
+          </h2>
+        </div>
+        <div>
+          <a
+            href="https://Discord.gg/meowtothemoon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.countdown}
+          >
+            Discord.gg/meowtothemoon
+          </a>
+        </div>
+      </>
+    );
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+      if (completed) {
+        return <Completionist />;
+      } else {
+        return (
+          <h2 style={{ whiteSpace: "pre-line" }} className={style.countdown}>
+            Pre Sale - {days * 24 + hours} Hours {minutes} Minutes {seconds}{" "}
+            Seconds
+          </h2>
+        );
+      }
+    };
     return (
-      <section className={style[`coming-wrapper`]}>
-        <img src={duedate} alt="duedate" />
-        {/* <img src="/app/duedate.png" alt="duedate" style={{ width: "585px" }} /> */}
-      </section>
+      <>
+        <section className={style[`coming-wrapper`]}>
+          <img src={duedate} alt="duedate" />
+          {/* <img src="/app/duedate.png" alt="duedate" style={{ width: "585px" }} /> */}
+        </section>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            flexDirection: "column",
+            alignItems: "center",
+
+            height: "18vh",
+          }}
+        >
+          <>
+            <Countdown
+              date={Date.UTC(2021, 10, 1, 12, 0, 0)}
+              renderer={renderer}
+            />
+          </>
+        </div>
+      </>
       //   <section className={style[`coming-wrapper`]}>
       //     <h2 className="text--5xl">Coming soon</h2>
       //   </section>
