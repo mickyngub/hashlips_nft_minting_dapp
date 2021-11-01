@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x237e1463cd81D3567fF1485ef2fC7c6521B316c9",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x237e1463cd81D3567fF1485ef2fC7c6521B316c9",
+  "CONTRACT_ADDRESS": "0x7101AE04449764894A14a128E136E3BD87367f2b",
+  "SCAN_LINK": "https://etherscan.io/address/0x7101ae04449764894a14a128e136e3bd87367f2b",
   "NETWORK": {
-    "NAME": "RINKEBY",
+    "NAME": "Ethereum Mainnet",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Meow To The Moon",
   "SYMBOL": "MTTM",
@@ -13,6 +13,6 @@
   "DISPLAY_COST": 0.0777,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opensea",
-  "MARKETPLACE_LINK": "",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/meowtothemoon",
   "SHOW_BACKGROUND": false
 }

@@ -323,20 +323,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "rootEarlyMeow",
-    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "rootMeowJunior",
-    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       { "internalType": "address", "name": "from", "type": "address" },
       { "internalType": "address", "name": "to", "type": "address" },
@@ -374,16 +360,6 @@
       { "internalType": "string", "name": "_newBaseURI", "type": "string" }
     ],
     "name": "setBaseURI",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      { "internalType": "uint256", "name": "max_supply", "type": "uint256" },
-      { "internalType": "uint256", "name": "max_premint", "type": "uint256" }
-    ],
-    "name": "setMaxSupplyAndPreMintSupply",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
