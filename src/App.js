@@ -1,5 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import MintPage from "./Pages/MintPage/MintPage";
+// import MintPage from "./Pages/MintPage/MintPage";
 import HomePage from "./Pages/HomePage/HomePage";
 import PremintPage from "./Pages/PremintPage/PremintPage";
 
