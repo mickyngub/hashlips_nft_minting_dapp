@@ -228,7 +228,8 @@ const MintPage = () => {
                 href={CONFIG.SCAN_LINK}
                 rel="noopener noreferrer"
               >
-                Contract Address: {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+                Meow To The Moon Contract Address:{" "}
+                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </a>
             </s.TextDescription>
             <s.SpacerSmall />
