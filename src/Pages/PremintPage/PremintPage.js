@@ -288,7 +288,7 @@ const PremintPage = () => {
                 color: "#621FF2",
               }}
             >
-              {data.totalSupply ? data.totalSupply : "?"} / {CONFIG.MAX_SUPPLY}
+              {data.totalSupply ? data.totalSupply : "?"} / 177
             </s.TextTitle>
             <s.TextDescription
               style={{
