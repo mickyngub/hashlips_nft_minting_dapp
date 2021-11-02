@@ -8,7 +8,7 @@
   },
   "NFT_NAME": "Meow To The Moon",
   "SYMBOL": "MTTM",
-  "MAX_SUPPLY": 177,
+  "MAX_SUPPLY": 7777,
   "WEI_COST": 77700000000000000,
   "DISPLAY_COST": 0.0777,
   "GAS_LIMIT": 285000,

@@ -228,7 +228,42 @@ const MintPage = () => {
                 color: "#621FF2",
               }}
             >
-              {data.totalSupply ? data.totalSupply : "?"} / 177
+              {/* {data.totalSupply ? data.totalSupply : "?"} / 177 */}
+              Soldout!
+            </s.TextTitle>
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize:
+                  screen_size == "iphone"
+                    ? 24
+                    : screen_size == "ipad_mini"
+                    ? 35
+                    : 40,
+              }}
+            >
+              MEOW
+              <i className={classes.GENESIS} style={{ color: "#2945FF" }}>
+                V
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#2945FF" }}>
+                2
+              </i>
+            </s.TextTitle>
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize:
+                  screen_size == "iphone"
+                    ? 20
+                    : screen_size == "ipad_mini"
+                    ? 30
+                    : 40,
+                fontWeight: "bold",
+                color: "#621FF2",
+              }}
+            >
+              {data.totalSupply ? data.totalSupply - 176 : "?"} / 7600
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -251,7 +286,6 @@ const MintPage = () => {
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </a>
             </s.TextDescription>
-            <s.SpacerSmall />
             <s.SpacerMedium />
             <s.TextTitle
               style={{
