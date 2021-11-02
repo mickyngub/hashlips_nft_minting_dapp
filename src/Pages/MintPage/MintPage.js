@@ -189,12 +189,31 @@ const MintPage = () => {
                     ? 24
                     : screen_size == "ipad_mini"
                     ? 35
-                    : 50,
-                fontWeight: "bold",
+                    : 40,
               }}
             >
-              {" "}
-              Meow Supply
+              MEOW
+              <i className={classes.GENESIS} style={{ color: "#f72585" }}>
+                G
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#b5179e" }}>
+                E
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#7209b7" }}>
+                N
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#560bad" }}>
+                E
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#3a0ca3" }}>
+                S
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#3f37c9" }}>
+                I
+              </i>
+              <i className={classes.GENESIS} style={{ color: "#4361ee" }}>
+                S
+              </i>
             </s.TextTitle>
             <s.TextTitle
               style={{
@@ -209,7 +228,7 @@ const MintPage = () => {
                 color: "#621FF2",
               }}
             >
-              {data.totalSupply ? data.totalSupply : "?"} / {CONFIG.MAX_SUPPLY}
+              {data.totalSupply ? data.totalSupply : "?"} / 177
             </s.TextTitle>
             <s.TextDescription
               style={{
