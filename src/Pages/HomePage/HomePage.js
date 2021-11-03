@@ -15,6 +15,7 @@ import styleMain from "../../assets/styles/main.module.css";
 
 import discord from "../../assets/images/discord.png";
 import twitter from "../../assets/images/twitter.png";
+import opensea from "../../assets/images/opensea.png";
 
 import cat1 from "../../assets/images/cat1.png";
 import cat2 from "../../assets/images/cat2.png";
@@ -23,6 +24,7 @@ import cat4 from "../../assets/images/cat4.png";
 import cat5 from "../../assets/images/cat5.png";
 import cat6 from "../../assets/images/cat6.png";
 import duedate from "../../assets/images/duedate.png";
+import genesisVSmeowv2pic from "../../assets/images/genesisVSmeowv2.png";
 
 const HomePage = () => {
   const onProps = {
@@ -34,19 +36,35 @@ const HomePage = () => {
       //     text: 'meow to the moon medium',
       //   },
       {
-        id: 2,
+        id: 1,
         image: discord,
         url: "https://discord.gg/gEnvhUGh58",
         text: "meow to the moon discord",
       },
       {
-        id: 3,
+        id: 2,
         image: twitter,
         url: "https://twitter.com/Meow2themoonNFT",
         text: "meow to the moon twitter",
       },
+      {
+        id: 3,
+        image: opensea,
+        url: "https://opensea.io/collection/meowtothemoon",
+        text: "meow to the moon opensea",
+      },
     ],
   };
+  const GenesisVSmeowv2 = () => (
+    <div>
+      <img
+        className={style.genesisVSmeowv2}
+        src={genesisVSmeowv2pic}
+        alt="genesisMeowAndmeowV2"
+      ></img>
+    </div>
+  );
+
   const ComingSoon = () => {
     const Completionist = () => (
       <>
@@ -134,18 +152,23 @@ const HomePage = () => {
   };
   const WhoWeAre = () => {
     return (
-      <section className="who-wrapper flex flex-col">
-        <h2 style={{ marginBottom: "16px" }} className="text--5xl">
-          Who are we ?
-        </h2>
-        <p className="text--xl text--smoke">
-          We are a group of crypto-investors, where each member has their own
-          speciality from their work in real life. We have seen many projects
-          that promise nothing but a dream for the community. Hence, we are
-          inspired to create a project where the community can truly earn the
-          benefit from investing in our project.
-        </p>
-      </section>
+      <>
+        <section className="who-wrapper flex flex-col">
+          <h2 style={{ marginBottom: "16px" }} className="text--5xl">
+            Who are we ?
+          </h2>
+          <p className="text--xl text--gray">
+            We are a group of crypto-investors, where each member has their own
+            speciality from their work in real life. We have seen many projects
+            that promise nothing but a dream for the community. Hence, we are
+            inspired to create a project where the community can truly earn the
+            benefit from investing in our project.
+          </p>
+        </section>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <h2 className="text--5xl m-auto">Meow Team</h2>
+        </div>
+      </>
     );
   };
   return (
@@ -153,12 +176,12 @@ const HomePage = () => {
       <div className={styleMain[`main-layout`]}>
         <Nav onProps={onProps} />
         <Banner />
-        {ComingSoon()}
-        {ProductImage()}
+        <GenesisVSmeowv2 />
+        <ProductImage />
         <About />
         <Rarities />
         <RoadMap />
-        {WhoWeAre()}
+        <WhoWeAre />
         <Team />
         <Faq />
         <Footer onProps={onProps} />
