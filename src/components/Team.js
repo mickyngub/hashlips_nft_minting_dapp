@@ -68,12 +68,4 @@ const TEAMS = [
       "Smart Contract Developer",
     ],
   },
-
-  {
-    id: 4,
-    image: secwind,
-    name: "DarkLord",
-    job: "Front-end Dev",
-    exps: ["Senior Front-end Dev at tech-startup", "Cryptocurrency Investor"],
-  },
 ];
