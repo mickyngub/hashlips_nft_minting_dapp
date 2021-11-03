@@ -14,7 +14,7 @@ section.poperties-wrapper .poperties-text {
   /* background: red; */
 }
 section.poperties-wrapper .poperties-text ul {
-  color: #621ff2;
+  color: #c638fe;
   list-style: square;
   /* list-style-position: outside; */
   padding-top: 24px;
@@ -59,7 +59,7 @@ section.poperties-wrapper .poperties-image img.img {
   }
   section.poperties-wrapper .poperties-text ul {
     order: 3;
-    color: #621ff2;
+    color: #c638fe;
     list-style: square;
     /* list-style-position: outside; */
     padding-top: 24px;
@@ -113,7 +113,7 @@ section.poperties-wrapper .poperties-image img.img {
   }
   section.poperties-wrapper .poperties-text ul {
     order: 3;
-    color: #621ff2;
+    color: #c638fe;
     list-style: square;
     /* list-style-position: outside; */
     padding-top: 24px;

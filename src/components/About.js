@@ -17,7 +17,7 @@ export default function About() {
       </div>
       <div className={style[`about-text`]}>
         <h2 className="text--5xl">About</h2>
-        <p className="text--xl text--smoke">
+        <p className="text--xl text--gray">
           Meow to the Moon is a 7777 randomly generated unordinary cats existing
           on Ethereum Blockchain. We don’t promise anything that is impossible,
           but everything that is written in the roadmap will be done. We truly

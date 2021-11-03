@@ -2,7 +2,7 @@ section.nav-container {
   position: sticky;
   width: 100vw;
   padding-top: 30px;
-  background: var(--bg);
+  background: #0f172a;
   top: 0px;
   z-index: 10;
 }
@@ -59,8 +59,7 @@ ul.menu-col li {
   gap: 20px;
 }
 .social-wrapper .social-col {
-  width: 105px;
-  /* width: 158px; */
+  width: 158px;
   display: flex;
   justify-content: space-between;
   /* background: red; */

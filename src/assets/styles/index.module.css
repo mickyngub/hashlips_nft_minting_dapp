@@ -22,6 +22,7 @@ section.product-wrapper {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  margin-top: 30px;
   margin-bottom: 84px;
 }
 /*-------------x----------------products-----------------x---------------*/
@@ -38,6 +39,10 @@ section.who-wrapper {
 
 .countdown {
   font-size: 50px;
+}
+
+.genesisVSmeowv2 {
+  width: 100vw;
 }
 /*------------------------------ipad mini---------------------------------*/
 @media screen and (max-width: 768px) {

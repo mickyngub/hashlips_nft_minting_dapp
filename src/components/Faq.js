@@ -11,7 +11,7 @@ export default function Faq() {
       <div className="faq-body">
         <div className="faq-box">
           <h2 className="text--4xl">What exactly is Meow to the Moon ?</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             Meow to the Moon is a 7777 randomly generated unordinary cats
             existing on Ethereum Blockchain. We don’t promise anything that is
             impossible, but everything that is written in the roadmap will be
@@ -21,13 +21,13 @@ export default function Faq() {
         </div>
         <div className="faq-box">
           <h2 className="text--4xl">So, What’s the price ?</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             The price of the Meows will be 0.0777 ETH/meow
           </p>
         </div>
         <div className="faq-box">
           <h2 className="text--4xl">Will there be a pre-sale or whitelist ?</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             Yes there are two roles for whitelist: Early Meow and Meow Junior
             Role. Learn more in our discord 😺
           </p>
@@ -36,7 +36,7 @@ export default function Faq() {
           <h2 className="text--4xl">
             Why should I invest in Meow to the Moon ?
           </h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             Firstly, the artwork is cute. Secondly, with the royalties program
             and continuous giveaway activities, the project is driven to benefit
             the community. Most importantly, this project is community-driven;
@@ -46,7 +46,7 @@ export default function Faq() {
         </div>
         <div className="faq-box">
           <h2 className="text--4xl">What’s the aim of this project ?</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             The founders have been an investor in Crypto world for over three
             years. There were ups and downs due to high volatility of the
             market. Hence, we want to create the project where holders can
@@ -56,7 +56,7 @@ export default function Faq() {
         </div>
         <div className="faq-box">
           <h2 className="text--4xl">Gas Price high AF!</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             Trust us, we understand the pain of gas war. As a result, we have
             decided to launch our project in the stealth drop format, ensuring
             that the pain of gas can be minimized.
@@ -64,7 +64,7 @@ export default function Faq() {
         </div>
         <div className="faq-box">
           <h2 className="text--4xl">Date of Launch</h2>
-          <p className="text--xl text--smoke">
+          <p className="text--xl text--gray">
             <b>Pre-sale Nov 1, 2021. Public sale Nov 2, 2021.</b>
           </p>
         </div>

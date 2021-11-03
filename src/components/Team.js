@@ -7,9 +7,6 @@ import plakorp from "../assets/images/plakorp.png";
 export default function Team() {
   return (
     <section id="team" className="team-wrapper flex flex-col shadow-md">
-      <div className="bg-white">
-        <h2 className="text--5xl m-auto">Meow Team</h2>
-      </div>
       <div className="team-body">
         {TEAMS.map((item, index) => (
           <div key={`meow-team-${item.id}`} className="team-card">
@@ -22,7 +19,7 @@ export default function Team() {
             <p className="text--xl text--700 text--primary">{item.job}</p>
             <p className="text--xl text--700 my-2">Past Experience:</p>
             {item.exps.map((exp, i) => (
-              <p key={i} className="text--xl text--smoke">
+              <p key={i} className="text--xl text--gray">
                 {exp}
               </p>
             ))}

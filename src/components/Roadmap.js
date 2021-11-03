@@ -70,7 +70,7 @@ export default function RoadMap() {
           </p>
         </div>
         <p style={{ color: "#AEB6C5" }} className="text--xl desc text--left ">
-          {item.text}
+          {ReactHtmlParser(item.text)}
         </p>
       </div>
     ));

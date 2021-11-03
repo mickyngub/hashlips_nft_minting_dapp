@@ -10,7 +10,7 @@ export default function Rarities() {
     <section id="rarities" className={style[`poperties-wrapper`]}>
       <div className={style[`poperties-text`]}>
         <h2 className="text--5xl">Rarities &amp; Traits</h2>
-        <p className="text--xl text--smoke">
+        <p className="text--xl text--gray">
           This is the 1st generation of meow metaverse which has over 450k
           possible combinations from the following trait options
         </p>

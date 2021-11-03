@@ -11,6 +11,7 @@
   --black20: #c4c4c4;
   --black10: #f9f9f9;
   --white: #ffff;
+  --gray: #cddae8;
   --bg: #f7f7f7;
 }
 
@@ -28,12 +29,16 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: var(--black);
+  color: var(--white);
   scroll-behavior: smooth;
 }
 
 a:link {
   text-decoration: none;
+}
+
+a {
+  color: white;
 }
 
 h1,
@@ -79,6 +84,10 @@ img {
 }
 .text--smoke {
   color: #5b6370;
+}
+
+.text--gray {
+  color: #cddae8;
 }
 
 .text--7xl {
@@ -220,7 +229,7 @@ ul.timeline-body li.active .timeline-item-title {
   top: -85px;
   display: flex;
   align-items: flex-end;
-  color: var(--primary);
+  color: var(--C638FE);
   font-weight: 700;
   gap: 15px;
 }
@@ -297,12 +306,12 @@ section.team-wrapper .bg-white {
   top: 0px;
   height: 100px;
   padding-top: 50px;
-  background: #fff;
+  background: #2a344f;
   /* background: red; */
 }
 
 section.team-wrapper .team-body {
-  background: #fff;
+  background: #2a344f;
   width: 100%;
   padding: 120px 107px 80px 107px;
   display: grid;
@@ -409,8 +418,7 @@ section.footer-wrapper .footer-container {
   gap: 20px;
 }
 .social-wrapper .social-col {
-  width: 105px;
-  /* width: 158px; */
+  width: 158px;
   display: flex;
   justify-content: space-between;
   /* background: red; */
@@ -472,23 +480,24 @@ section.footer-wrapper .footer-container {
     row-gap: 40px;
     margin: 0 auto;
     padding-top: 40px;
-    margin-bottom: 56px;
+    margin-bottom: 30px;
+    margin-top: 40px;
     width: 100vw;
-    background: #fff;
+    background: #2a344f;
   }
   section.team-wrapper .bg-white {
     padding-top: 50px;
   }
 
   section.team-wrapper .team-body {
-    background: #fff;
+    background: #2a344f;
     width: 100%;
     padding: 0 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 34px;
     column-gap: 45px;
-    margin-top: 120px;
+    /* margin-top: 120px; */
 
     padding-bottom: 56px;
   }
@@ -630,7 +639,7 @@ section.footer-wrapper .footer-container {
   }
   .roadMap-sm-title-text {
     font-size: 24px;
-    width: 200px;
+    width: 300px;
     font-weight: 700;
     text-align: left;
   }
@@ -651,9 +660,10 @@ section.footer-wrapper .footer-container {
   section.team-wrapper {
     row-gap: 40px;
     margin: 0 auto;
+    margin-top: 30px;
     margin-bottom: 80px;
     width: 100vw;
-    background: #fff;
+    background: #2a344f;
   }
   section.team-wrapper .bg-white {
     padding-top: 25px;
@@ -666,7 +676,7 @@ section.footer-wrapper .footer-container {
   }
 
   section.team-wrapper .team-body {
-    background: #fff;
+    background: #2a344f;
     width: 100%;
     padding: 0;
     display: grid;
@@ -779,8 +789,7 @@ section.footer-wrapper .footer-container {
     margin: 20px auto 0px auto;
   }
   .social-wrapper .social-col {
-    width: 105px;
-    /* width: 158px; */
+    width: 158px;
     display: flex;
     justify-content: space-between;
     gap: 32px;
