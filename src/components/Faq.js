@@ -22,14 +22,18 @@ export default function Faq() {
         <div className="faq-box">
           <h2 className="text--4xl">So, What’s the price ?</h2>
           <p className="text--xl text--gray">
-            The price of the Meows will be 0.0777 ETH/meow
+            The price of the Meows will be 0.0777 ETH/meow.
           </p>
         </div>
         <div className="faq-box">
-          <h2 className="text--4xl">Will there be a pre-sale or whitelist ?</h2>
+          <h2 className="text--4xl">
+            Will there be a pre-sale or whitelist for Meow V2?
+          </h2>
           <p className="text--xl text--gray">
-            Yes there are two roles for whitelist: Early Meow and Meow Junior
-            Role. Learn more in our discord 😺
+            Yes, there will be a whitelist for the Meow V2 collection. Firstly,
+            the Meow Genesis holder will automatically receive the whitelist
+            quota. As for newcomers, the whitelist will be determined by the
+            activeness in our discord till our snapshot time.
           </p>
         </div>
         <div className="faq-box">
@@ -57,15 +61,18 @@ export default function Faq() {
         <div className="faq-box">
           <h2 className="text--4xl">Gas Price high AF!</h2>
           <p className="text--xl text--gray">
-            Trust us, we understand the pain of gas war. As a result, we have
-            decided to launch our project in the stealth drop format, ensuring
-            that the pain of gas can be minimized.
+            We have learnt from our initial plan of MTTM project. From our
+            mistake and learning, we will decide along with our community with
+            the best way possible to ensure that the pain of gas can be
+            minimized.
           </p>
         </div>
+
         <div className="faq-box">
-          <h2 className="text--4xl">Date of Launch</h2>
+          <h2 className="text--4xl">When is the launched for Meow V2?</h2>
           <p className="text--xl text--gray">
-            <b>Pre-sale Nov 1, 2021. Public sale Nov 2, 2021.</b>
+            Genesis Meow is sold out. The date for pre-sale and public sale for
+            Meow V2 is to be announced
           </p>
         </div>
       </div>

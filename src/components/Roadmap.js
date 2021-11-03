@@ -104,10 +104,10 @@ const ITEMS = [
     id: 1,
     header: {
       title: "Season 0",
-      text: "The fall and emergence of The Meow Genesis",
+      text: "The Fall and Emergence of The Meow Genesis",
     },
     title: "Prologue",
-    text: "The gas blackhole has damaged the spaceship; only 187 meows survived from the incident. These survivors are regarded as <b class='redText'> “The Meow Genesis”. </b>",
+    text: "The Gas Blackhole has damaged the spaceship; only 187 meows survived from the incident. These survivors are regarded as <b class='rainbowText'> “The Meow Genesis”. </b>",
     position: "0",
     is_active: true,
   },
@@ -118,7 +118,7 @@ const ITEMS = [
       text: "The New Beginning",
     },
     title: "The Awakening of Genesis",
-    text: "Brace for the impact, a huge wave is coming. The 187 uniquely 1/1 created Meow will be revealed; the new era of NFT is here.",
+    text: "Brace for the impact, a huge wave is coming. The 187 uniquely 1/1 created Meow will be revealed; the new era of NFT is here. <b class='rainbowText'>We will reveal the Genesis Meow in 4 batches starting from Nov 7th to Nov 13th. </b>",
     position: "1",
     is_active: true,
   },
@@ -129,7 +129,7 @@ const ITEMS = [
       text: "",
     },
     title: "The Attention",
-    text: "The world is panicking from the “Gas blackhole Incident”, living in fear and anxiety. The team will focus hugely on marketing through influencers, social media, and bring the mass attention to ramp up Meow to the Moon into space.",
+    text: "The world is panicking from the “Gas Blackhole Incident”, living in fear and anxiety. The team will focus hugely on marketing through influencers, social media, and bring the mass attention to ramp up Meow to the Moon into space.",
     position: "2",
     is_active: false,
   },
@@ -140,7 +140,7 @@ const ITEMS = [
       text: "",
     },
     title: "The Genesis’s Right",
-    text: "Two days Before the pre-sale of Meow V2, <b class='redText'>The Meow Genesis holder will be able to free mint 2 Meows V2 for every Meow Genesis they hold.</b>",
+    text: "Two days before the pre-sale of Meow V2, <b class='rainbowText'>The Meow Genesis holder will be able to free mint 2 Meows V2 for every Meow Genesis they hold.</b>",
     position: "3",
     is_active: false,
   },
@@ -153,7 +153,7 @@ const ITEMS = [
     title: "The Meow V2 Recruitment (Date: TBA)",
     text: `The meow army wants to recruit marvelous soldiers to join the spaceship. The new Meow V2 collection will be launched.
     
-    <b class='redText'>- The Meow Genesis Holder will automatically receive the Whitelist in the Meow V2 Collection</b>
+    <b class='rainbowText'>- The Meow Genesis Holder will automatically receive the Whitelist in the Meow V2 Collection</b>
     `,
     position: "1",
     is_active: true,
@@ -165,7 +165,7 @@ const ITEMS = [
       text: "",
     },
     title: "The 777 Meow Machine (At Meow V2 25% Sold)",
-    text: `Meow V2 holders will receive a raffle for every meow V2 they own <b class='redText'> + Meow Genesis holders will receive an addition of 1 raffle </b> for every two weeks to participate in the 777 Meow machine.
+    text: `Meow V2 holders will receive a raffle for every meow V2 they own <b class='rainbowText'> + Meow Genesis holders will receive an addition of 1 raffle </b> for every two weeks to participate in the 777 Meow machine.
     
     The 777 Meow machine is the slot machine where the player will be <b>guaranteed a reward</b>, with the fund of the slot machine will be <b>10% of our Meow V2 minting revenue</b>
 
@@ -182,13 +182,14 @@ const ITEMS = [
     title: "The Treasure Cavemoon (At Meow V2 50% Sold)",
     text: `The Meow Genesis and Meow V2 holders will be able to <b>stake Meow NFT</b> to receive the <b>$Meow Token</b> which can be used in Meow’s cave, an exclusive reward center.
 
-    <b class='redText'>The Genesis Meow Collection will have x1.5 multiplier to the earning of $Meow Token</b>.
+    <b class='rainbowText'>The Genesis Meow Collection will have x1.5 multiplier to the earning of $Meow Token</b>.
 
-    <b>Reward</b> -
+    <b>Reward</b>:
     <b>[DAO’s Selection]</b>: Anything purchased by the Dao’s wallet
     <b>[Fast-pass comic ticket]</b>: One-week fast pass 
     <b>[The Secret Ticket]</b>: The pass to the <b>Secret Collection</b>...
-    <b class='redText'>[Genesis’s exclusive merchandise]: Only for Meow Genesis holder for free</b>
+    <b>[Meow V2 exclusive merchandise]</b>: For Meow V2 holder
+    <b class='rainbowText'>[Genesis’s exclusive merchandise]: Only for Meow Genesis holder for free</b>
 
     In addition, the start of <b>Meow to the Moon The Series</b> comic will be available for holders to read every week.
 
@@ -218,12 +219,11 @@ const ITEMS = [
       text: "The Warp Port (At Meow V2 100% sold)",
     },
     title: "Epilogue",
-    text: `<b>[Sandbox Land]</b> - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works.
-    <b class="redText">Genesis Holder will be given 1x Genesis House in the Meow’s Land we are going to build in the Sandbox Metaverse. </b>
-  .
-  <b>[Meow Token V2]</b> - We will expand the usage of Meow tokens beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
-  .
-  <b>[Meow Note]</b> - We are only as big as our community, the community will be the one who decides the direction of Season 3.
+    text: `<b>- [Sandbox Land]</b> - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works.
+    <b class="rainbowText">Genesis Holder will be given 1x Genesis House in the Meow’s Land we are going to build in the Sandbox Metaverse. </b>
+\n - <b>[Meow Token V2]</b> - We will expand the usage of Meow tokens beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
+  
+  - <b>[Meow Note]</b> - We are only as big as our community, the community will be the one who decides the direction of Season 3.
   
     `,
     position: "X",

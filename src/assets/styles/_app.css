@@ -258,7 +258,7 @@ ul.timeline-body li.active .timeline-item-title {
   gap: 5px;
 }
 
-.redText {
+.rainbowText {
   background: -webkit-linear-gradient(left, #18b4e5, #ee1ff2);
   background: -o-linear-gradient(right, #18b4e5, #ee1ff2);
   background: -moz-linear-gradient(right, #18b4e5, #ee1ff2);
