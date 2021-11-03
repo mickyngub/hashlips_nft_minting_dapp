@@ -118,7 +118,7 @@ const ITEMS = [
       text: "The New Beginning",
     },
     title: "The Awakening of Genesis",
-    text: "Brace for the impact, a huge wave is coming. The 187 uniquely 1/1 created Meow will be revealed; the new era of NFT is here. <b class='rainbowText'>We will reveal the Genesis Meow in 4 batches starting from Nov 7th to Nov 13th. </b>",
+    text: "Brace for the impact, a huge wave is coming. The 187 uniquely 1/1 created Meow will be revealed; the new era of NFT is here. <b class='rainbowText'>We will reveal the Meow Genesis in 4 batches starting from Nov 7th to Nov 13th. </b>",
     position: "1",
     is_active: true,
   },
@@ -140,7 +140,7 @@ const ITEMS = [
       text: "",
     },
     title: "The Genesis’s Right",
-    text: "Two days before the pre-sale of Meow V2, <b class='rainbowText'>The Meow Genesis holder will be able to free mint 2 Meows V2 for every Meow Genesis they hold.</b>",
+    text: "Two days before the pre-sale of Meow V2, <b class='rainbowText'>  Meow Genesis holders will be able to free mint 2 Meows V2 for every Meow Genesis they hold.</b>",
     position: "3",
     is_active: false,
   },
@@ -153,7 +153,7 @@ const ITEMS = [
     title: "The Meow V2 Recruitment (Date: TBA)",
     text: `The meow army wants to recruit marvelous soldiers to join the spaceship. The new Meow V2 collection will be launched.
     
-    <b class='rainbowText'>- The Meow Genesis Holder will automatically receive the Whitelist in the Meow V2 Collection</b>
+    <b class='rainbowText'>-  Meow Genesis holders will automatically receive the Whitelist in the Meow V2 Collection</b>
     `,
     position: "1",
     is_active: true,
@@ -182,14 +182,14 @@ const ITEMS = [
     title: "The Treasure Cavemoon (At Meow V2 50% Sold)",
     text: `The Meow Genesis and Meow V2 holders will be able to <b>stake Meow NFT</b> to receive the <b>$Meow Token</b> which can be used in Meow’s cave, an exclusive reward center.
 
-    <b class='rainbowText'>The Genesis Meow Collection will have x1.5 multiplier to the earning of $Meow Token</b>.
+    <b class='rainbowText'>The Meow Genesis Collection will have x1.5 multiplier to the earning of $Meow Token</b>.
 
     <b>Reward</b>:
     <b>[DAO’s Selection]</b>: Anything purchased by the Dao’s wallet
     <b>[Fast-pass comic ticket]</b>: One-week fast pass 
     <b>[The Secret Ticket]</b>: The pass to the <b>Secret Collection</b>...
     <b>[Meow V2 exclusive merchandise]</b>: For Meow V2 holder
-    <b class='rainbowText'>[Genesis’s exclusive merchandise]: Only for Meow Genesis holder for free</b>
+    <b class='rainbowText'>[Genesis’s exclusive merchandise]: Only for Meow Genesis holders for free</b>
 
     In addition, the start of <b>Meow to the Moon The Series</b> comic will be available for holders to read every week.
 
@@ -220,7 +220,7 @@ const ITEMS = [
     },
     title: "Epilogue",
     text: `<b>- [Sandbox Land]</b> - We will purchase land, which will serve as the place where Meow’s holders can engage with each other, build connections, and promote their works.
-    <b class="rainbowText">Genesis Holder will be given 1x Genesis House in the Meow’s Land we are going to build in the Sandbox Metaverse. </b>
+    <b class="rainbowText">Meow Genesis Holders will be given 1x Genesis House in the Meow’s Land we are going to build in the Sandbox Metaverse. </b>
 \n - <b>[Meow Token V2]</b> - We will expand the usage of Meow tokens beyond the reward center in season 1. It may be in the format of NFT-game, Utility Usage, and etc, depending on the direction that the community wants us to go.
   
   - <b>[Meow Note]</b> - We are only as big as our community, the community will be the one who decides the direction of Season 3.

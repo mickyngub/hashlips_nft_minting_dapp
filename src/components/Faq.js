@@ -75,6 +75,17 @@ export default function Faq() {
             Meow V2 is to be announced
           </p>
         </div>
+        <div className="faq-box">
+          <h2 className="text--4xl">
+            How will the royalties feel of Meow V2 be distributed?
+          </h2>
+          <p className="text--xl text--gray">
+            The royalty fee from the Meow V2 secondary marketplace will be
+            distributed accordingly, 30% for marketing, 30% to the DAO wallet,
+            20% to sweep the floor, 10% to charity upon community selection, and
+            10% for hiring new members
+          </p>
+        </div>
       </div>
       <img src={star1} className="star-1" alt="image-star-1" />
       <img src={star2} className="star-2" alt="image-star-2" />
