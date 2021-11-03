@@ -1,7 +1,7 @@
 FROM node:alpine as development 
 WORKDIR /app
 COPY package.json /app
-RUN npm install 
+RUN npm install --legacy-peer-deps
 COPY . /app
 
 FROM development AS builder 
