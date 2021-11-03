@@ -263,7 +263,7 @@ const MintPage = () => {
                 color: "#621FF2",
               }}
             >
-              {data.totalSupply ? data.totalSupply - 176 : "?"} / 7600
+              {data.totalSupply ? data.totalSupply - 188 : "?"} / 7590
             </s.TextTitle>
             <s.TextDescription
               style={{
