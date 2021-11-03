@@ -137,7 +137,7 @@ img {
   display: none;
 }
 section.roadMap-overview {
-  background: var(--secondary);
+  background: #0f172a;
   width: 100vw;
   margin-bottom: 50px;
 }
@@ -249,6 +249,14 @@ ul.timeline-body li.active .timeline-item-title {
   gap: 5px;
 }
 
+.redText {
+  background: -webkit-linear-gradient(left, #18b4e5, #ee1ff2);
+  background: -o-linear-gradient(right, #18b4e5, #ee1ff2);
+  background: -moz-linear-gradient(right, #18b4e5, #ee1ff2);
+  background: linear-gradient(to right, #18b4e5, #ee1ff2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .pre-white {
   white-space: pre-line;
 }
@@ -440,7 +448,7 @@ section.footer-wrapper .footer-container {
   /*-------------x----------------who we are Ipad-----------------x---------------*/
   /*------------------------------roadMap Ipad---------------------------------*/
   section.roadMap-overview {
-    background: var(--secondary);
+    background: #0f172a;
     width: 100vw;
     padding: 0 32px;
     margin-bottom: 50px;
@@ -554,7 +562,7 @@ section.footer-wrapper .footer-container {
   }
   /*------------------------------roadMap Mobile---------------------------------*/
   section.roadMap-overview {
-    background: var(--secondary);
+    background: #0f172a;
     width: 100vw;
     margin-bottom: 50px;
     padding-top: 58px;
