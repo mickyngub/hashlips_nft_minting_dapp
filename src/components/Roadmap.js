@@ -35,8 +35,12 @@ export default function RoadMap() {
               <p className="text--body text--700">{item.position}</p>
             </div>
             <div className="timeline-item-title">
-              <h2 className="text--5xl">{item.header.title}</h2>
-              <p className="text--2xl">{item.header.text}</p>
+              <h2 style={{ color: "#621FF2" }} className="text--5xl">
+                {item.header.title}
+              </h2>
+              <p style={{ color: "#621FF2" }} className="text--2xl">
+                {item.header.text}
+              </p>
             </div>
           </li>
         ))}
@@ -55,8 +59,13 @@ export default function RoadMap() {
         })}
       >
         <div className="roadMap-session">
-          <h2 className="text--4xl text--primary">{item.header.title}</h2>
-          <p className="text--xl text--700 text--primary text--left pre-white">
+          <h2 style={{ color: "#621FF2" }} className="text--4xl text--primary">
+            {item.header.title}
+          </h2>
+          <p
+            style={{ color: "#621FF2" }}
+            className="text--xl text--700 text--primary text--left pre-white"
+          >
             {item.header.text}
           </p>
         </div>

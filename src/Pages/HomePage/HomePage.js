@@ -24,7 +24,7 @@ import cat4 from "../../assets/images/cat4.png";
 import cat5 from "../../assets/images/cat5.png";
 import cat6 from "../../assets/images/cat6.png";
 import duedate from "../../assets/images/duedate.png";
-import genesisVSmeowv2pic from "../../assets/images/genesisVSmeowv2.png";
+import genesisVSmeowv2pic from "../../assets/images/genesisVSmeowv2.jpg";
 
 const HomePage = () => {
   const onProps = {
