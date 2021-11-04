@@ -598,7 +598,7 @@ section.footer-wrapper .footer-container {
   }
 
   .timeline-wrapper .roadMap-sm {
-    width: 90%;
+    width: 95%;
     margin: 30px auto;
     display: grid;
     grid-auto-flow: row;
