@@ -78,7 +78,10 @@ export default function RoadMap() {
             {item.title}
           </p>
         </div>
-        <p style={{ color: "#AEB6C5" }} className="text--xl desc text--left ">
+        <p
+          style={{ color: "#AEB6C5" }}
+          className="text--xl desc text--left pre-white"
+        >
           {ReactHtmlParser(item.text)}
         </p>
       </div>
