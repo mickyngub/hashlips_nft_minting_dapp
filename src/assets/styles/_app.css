@@ -265,6 +265,7 @@ ul.timeline-body li.active .timeline-item-title {
   background: linear-gradient(to right, #18b4e5, #ee1ff2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
 }
 .pre-white {
   white-space: pre-line;
@@ -597,7 +598,7 @@ section.footer-wrapper .footer-container {
   }
 
   .timeline-wrapper .roadMap-sm {
-    width: 100%;
+    width: 90%;
     margin: 30px auto;
     display: grid;
     grid-auto-flow: row;
@@ -639,7 +640,7 @@ section.footer-wrapper .footer-container {
   }
   .roadMap-sm-title-text {
     font-size: 24px;
-    width: 300px;
+    width: 200px;
     font-weight: 700;
     text-align: left;
   }
