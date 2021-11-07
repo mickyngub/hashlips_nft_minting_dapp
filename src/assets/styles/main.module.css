@@ -1,6 +1,5 @@
 .main-layout {
   --container: 980px;
-  width: 100%;
   /* background: var(--bg);
    */
   background: rgb(15, 23, 42);
@@ -14,7 +13,7 @@
   padding: 0;
   margin: 0px;
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 /*------------------------------ipad mini---------------------------------*/
