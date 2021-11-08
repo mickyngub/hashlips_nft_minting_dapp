@@ -6,7 +6,7 @@ import plakorp from "../assets/images/plakorp.png";
 
 export default function Team() {
   return (
-    <section id="team" className="team-wrapper flex flex-col shadow-md">
+    <section className="team-wrapper flex flex-col shadow-md">
       <div className="team-body">
         {TEAMS.map((item, index) => (
           <div key={`meow-team-${item.id}`} className="team-card">

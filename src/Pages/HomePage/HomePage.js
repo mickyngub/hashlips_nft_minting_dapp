@@ -166,7 +166,9 @@ const HomePage = () => {
           </p>
         </section>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h2 className="text--5xl m-auto">Meow Team</h2>
+          <h2 id="team" className="text--5xl m-auto">
+            Meow Team
+          </h2>
         </div>
       </>
     );

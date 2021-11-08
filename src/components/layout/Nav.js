@@ -46,6 +46,16 @@ export default function Nav({ onProps, mintPage, screen_size }) {
         <li className="text--lg text--700">
           <a href="#faqs">FAQs</a>
         </li>
+        <li className="text--lg text--700">
+          <a
+            style={{ color: "#EE1FF2" }}
+            href="https://drive.google.com/drive/u/4/folders/1NScseZsVArCRM5dXB0qgwd7tY7eRjq-q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Whitepaper
+          </a>
+        </li>
       </ul>
     );
   }
