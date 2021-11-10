@@ -20,6 +20,14 @@ export default function Faq() {
           </p>
         </div>
         <div className="faq-box">
+          <h2 className="text--4xl">When is the launched for Meow V2?</h2>
+          <p className="text--xl text--gray">
+            Genesis Meow is sold out. <br></br>Pre-sale for Meow V2 is on Nov
+            26th 2021. <br></br>Public Sale + Genesis Free Mint for Meow V2 is
+            on Nov 27th 2021.
+          </p>
+        </div>
+        <div className="faq-box">
           <h2 className="text--4xl">So, What’s the price ?</h2>
           <p className="text--xl text--gray">
             The price of the Meows will be 0.0777 ETH/meow.
@@ -68,13 +76,6 @@ export default function Faq() {
           </p>
         </div>
 
-        <div className="faq-box">
-          <h2 className="text--4xl">When is the launched for Meow V2?</h2>
-          <p className="text--xl text--gray">
-            Genesis Meow is sold out. The date for pre-sale and public sale for
-            Meow V2 is to be announced
-          </p>
-        </div>
         <div className="faq-box">
           <h2 className="text--4xl">
             How will the royalties feel of Meow V2 be distributed?
