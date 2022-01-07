@@ -7,6 +7,7 @@ const App = () => {
       <Route path="/" exact component={HomePage} />
       {/* <Route path="/mint" exact component={MintPage} /> */}
       {/* <Route path="/premint" exact component={PremintPage} /> */}
+      {/* Vercel */}
       <Redirect to="/" />
     </Switch>
   );
