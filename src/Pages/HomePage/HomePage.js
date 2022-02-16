@@ -38,13 +38,13 @@ const HomePage = () => {
       {
         id: 1,
         image: discord,
-        url: "https://discord.gg/gEnvhUGh58",
+        url: "https://discord.gg/meowniverse",
         text: "meow to the moon discord",
       },
       {
         id: 2,
         image: twitter,
-        url: "https://twitter.com/Meow2themoonNFT",
+        url: "https://twitter.com/MeowniverseNFT",
         text: "meow to the moon twitter",
       },
       {
